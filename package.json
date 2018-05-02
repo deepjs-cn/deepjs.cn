@@ -1,0 +1,42 @@
+{
+  "name": "kitdocs.org",
+  "version": "0.0.1",
+  "description": "致力于提供最新最全的【文档库】及其活跃社区",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "deployOnly": "gh-pages -d dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "vuepress": "^0.8.4",
+    "vuepress-theme-vue": "^1.0.2",
+    "vuepress-theme-ads": "^0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitdocs/kitdocs.org.git"
+  },
+  "keywords": [
+    "kitdocs"
+  ],
+  "author": "cloudyan",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kitdocs/kitdocs.org/issues"
+  },
+  "homepage": "https://github.com/kitdocs/kitdocs.org#readme",
+  "engines": {
+    "node": ">=8"
+  },
+  "browserslist": [
+    ">1%"
+  ]
+}
