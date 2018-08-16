@@ -36,6 +36,10 @@ module.exports = {
         editLinkText: '在 GitHub 上编辑此页',
         nav: [
           {
+            text: '最新资讯',
+            link: '/news/'
+          },
+          {
             text: '开发文档',
             link: '/docs/',
           },
@@ -44,8 +48,8 @@ module.exports = {
             link: '/community/'
           },
           {
-            text: '最新资讯',
-            link: '/news/'
+            text: '面试题库',
+            link: '/interview/'
           },
           // {
           //   text: '我的收藏',
@@ -62,6 +66,10 @@ module.exports = {
         editLinkText: 'Edit this page on GitHub',
         nav: [
           {
+            text: 'news',
+            link: '/news/'
+          },
+          {
             text: 'docs',
             link: '/docs/',
           },
@@ -70,8 +78,8 @@ module.exports = {
             link: '/community/'
           },
           {
-            text: 'news',
-            link: '/news/'
+            text: 'interview',
+            link: '/interview/'
           },
         ],
         sidebar: {
