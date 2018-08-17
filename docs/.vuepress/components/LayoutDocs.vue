@@ -103,14 +103,14 @@ export default {
     p
       color lighten($textColor, 25%)
 @media (max-width: $MQMobile)
-  .list-docs
+  .kit-list
     flex-direction column
     .item
       max-width 100%
       padding 0 2.5rem
 
 @media (max-width: $MQMobileNarrow)
-  .list-docs
+  .kit-list
     .item
       h2
         font-size 1.25rem
