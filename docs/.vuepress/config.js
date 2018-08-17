@@ -1,16 +1,35 @@
-module.exports = {
-  dest: 'dist',
-  locales: {
-    '/': {
+
+const locales = {
+  'zh-CN': {
+    site: {
       lang: 'zh-CN',
       title: 'KitDocs.org',
-      description: '致力于提供最新最全的文档库'
+      description: '致力于提供一个好用的知识文档库',
     },
-    '/en': {
+    news: '资讯',
+    topic: '知识点',
+    docs: '开发文档',
+    community: '社区',
+    // favorite: '我的收藏',
+  },
+  'en': {
+    site: {
       lang: 'en-US',
       title: 'KitDocs.org',
       description: 'Dedicated to Docs and its awesome community'
     },
+    news: 'news',
+    topic: 'topic',
+    docs: 'docs',
+    community: 'community',
+  },
+}
+
+module.exports = {
+  dest: 'dist',
+  locales: {
+    '/': locales['zh-CN'].site,
+    '/en': locales['en'].site,
   },
   head: [
     ['link', { rel: 'icon', href: `/logo.png` }],
@@ -27,6 +46,7 @@ module.exports = {
   // theme: 'ads',
   themeConfig: {
     // repo: 'kitdocs/kitdocs.org',
+    lastUpdated: 'Last Updated', // string | boolean
     editLinks: true,
     docsDir: 'docs',
     locales: {
@@ -36,20 +56,24 @@ module.exports = {
         editLinkText: '在 GitHub 上编辑此页',
         nav: [
           {
-            text: '最新资讯',
+            text: '资讯',
             link: '/news/'
+          },
+          {
+            text: '知识点',
+            link: '/topic/'
           },
           {
             text: '开发文档',
             link: '/docs/',
           },
+          // {
+          //   text: '书籍',
+          //   link: '/book/'
+          // },
           {
             text: '社区',
             link: '/community/'
-          },
-          {
-            text: '面试题库',
-            link: '/interview/'
           },
           // {
           //   text: '我的收藏',
@@ -57,7 +81,7 @@ module.exports = {
           // },
         ],
         sidebar: {
-          '/docs/': genSidebarConfig('开发文档')
+          ...genSidebarConfig('zh-CN')
         },
       },
       '/en': {
@@ -70,37 +94,71 @@ module.exports = {
             link: '/news/'
           },
           {
+            text: 'topic',
+            link: '/topic/'
+          },
+          {
             text: 'docs',
             link: '/docs/',
           },
+          // {
+          //   text: 'book',
+          //   link: '/book/'
+          // },
           {
             text: 'community',
             link: '/community/'
           },
-          {
-            text: 'interview',
-            link: '/interview/'
-          },
         ],
         sidebar: {
-          '/docs/': genSidebarConfig('docs')
+          ...genSidebarConfig('zh-CN')
         },
       },
     }
   }
 }
 
-function genSidebarConfig (title) {
-  return [
-    {
-      title,
-      collapsable: false,
-      children: [
-        '/docs/',
-        // '/docs/vue',
-        // '/docs/',
-        // '/docs/vue',
-      ]
-    },
-  ]
+function genSidebarConfig(lang) {
+  const t = locales[lang];
+  return {
+    '/news/': [
+      {
+        title: t['news'],
+        collapsable: true,
+        children: [
+          '',
+        ]
+      },
+    ],
+    '/topic/': [
+      {
+        title: t['topic'],
+        collapsable: true,
+        children: [
+          '',
+          'html/',
+          'css/',
+          'javascript/',
+        ]
+      },
+    ],
+    '/docs/': [
+      {
+        title: t['docs'],
+        collapsable: true,
+        children: [
+          '',
+          // 'frontend',
+          // 'backend',
+          // 'database',
+        ]
+      },
+    ],
+    // fallback
+    '/': [
+      '',        /* / */
+      'contact', /* /contact.html */
+      'about'    /* /about.html */
+    ],
+  };
 }

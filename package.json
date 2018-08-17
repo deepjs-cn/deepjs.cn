@@ -2,30 +2,26 @@
   "name": "kitdocs.org",
   "version": "0.0.1",
   "description": "致力于提供最新最全的【文档库】及其活跃社区",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
+  "main": "lib/index.js",
+  "bin": {
+    "vuepress": "bin/vuepress.js"
   },
   "scripts": {
-    "dev": "vuepress dev .",
-    "build": "vuepress build .",
+    "dev": "node bin/vuepress dev docs",
+    "build": "node bin/vuepress build docs",
+    "lint": "eslint --fix --ext .js,.vue bin/ lib/ test/",
+    "prepublishOnly": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "deployOnly": "gh-pages -d dist"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "gh-pages": "^1.1.0",
-    "vuepress": "^0.8.4",
-    "vuepress-theme-vue": "^1.0.2",
-    "vuepress-theme-ads": "^0.0.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kitdocs/kitdocs.org.git"
   },
   "keywords": [
-    "kitdocs"
+    "kitdocs",
+    "kitjs"
   ],
   "author": "cloudyan",
   "license": "Apache-2.0",
@@ -33,6 +29,88 @@
     "url": "https://github.com/kitdocs/kitdocs.org/issues"
   },
   "homepage": "https://github.com/kitdocs/kitdocs.org#readme",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "autoprefixer": "^8.2.0",
+    "babel-core": "^6.26.3",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chalk": "^2.3.2",
+    "chokidar": "^2.0.3",
+    "commander": "^2.15.1",
+    "connect-history-api-fallback": "^1.5.0",
+    "copy-webpack-plugin": "^4.5.1",
+    "cross-spawn": "^6.0.5",
+    "css-loader": "^0.28.11",
+    "diacritics": "^1.3.0",
+    "docsearch.js": "^2.5.2",
+    "es6-promise": "^4.2.4",
+    "escape-html": "^1.0.3",
+    "file-loader": "^1.1.11",
+    "fs-extra": "^5.0.0",
+    "globby": "^8.0.1",
+    "gray-matter": "^4.0.1",
+    "js-yaml": "^3.11.0",
+    "koa-connect": "^2.0.1",
+    "koa-mount": "^3.0.0",
+    "koa-static": "^4.0.2",
+    "loader-utils": "^1.1.0",
+    "lodash.throttle": "^4.1.1",
+    "lru-cache": "^4.1.2",
+    "markdown-it": "^8.4.1",
+    "markdown-it-anchor": "^4.0.0",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-emoji": "^1.4.0",
+    "markdown-it-table-of-contents": "^0.3.3",
+    "mini-css-extract-plugin": "^0.4.0",
+    "nprogress": "^0.2.0",
+    "object-assign": "^4.1.1",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "portfinder": "^1.0.13",
+    "postcss-loader": "^2.1.5",
+    "prismjs": "^1.13.0",
+    "register-service-worker": "^1.2.0",
+    "semver": "^5.5.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "toml": "^2.3.3",
+    "url-loader": "^1.0.1",
+    "vue": "^2.5.16",
+    "vue-loader": "^15.0.4",
+    "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.16",
+    "vue-template-compiler": "^2.5.16",
+    "vuepress-html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.8.1",
+    "webpack-chain": "^4.6.0",
+    "webpack-merge": "^4.1.2",
+    "webpack-serve": "^0.3.2",
+    "webpackbar": "^2.6.1",
+    "workbox-build": "^3.1.0"
+  },
+  "devDependencies": {
+    "conventional-changelog": "^1.1.23",
+    "eslint": "^4.19.1",
+    "eslint-plugin-vue-libs": "^3.0.0",
+    "gh-pages": "^1.1.0",
+    "lint-staged": "^7.0.4",
+    "vuepress-theme-vue": "^1.0.2",
+    "vuepress-theme-ads": "^0.0.1",
+    "yorkie": "^1.0.3"
+  },
   "engines": {
     "node": ">=8"
   },

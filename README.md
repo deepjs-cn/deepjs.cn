@@ -1,14 +1,3 @@
----
-home: true
-heroImage: /hero.png
-actionText: 去看看 →
-actionLink: /docs/
-features:
-- title: 简洁至上
-  details: 排版清晰，一目明了。
-- title: Vue驱动
-  details: 快速直达，操作便捷。
-- title: 高性能
-  details: 静态化，以 SPA 运行。
-footer: Copyright © 2018-present cloudyan
----
+# KITDOCS.ORG
+
+致力于提供一个好用的知识文档库
