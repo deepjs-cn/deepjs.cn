@@ -1,5 +1,5 @@
 ---
-layout: LayoutDocs
+layout: layout-LayoutDocs
 sidebar: false
 list:
 - title: HTML

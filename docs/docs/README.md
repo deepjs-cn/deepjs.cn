@@ -1,5 +1,5 @@
 ---
-layout: LayoutDocs
+layout: layout-LayoutDocs
 sidebar: false
 heroImage: /hero.png
 actionText: 去看看 →
@@ -901,4 +901,4 @@ list:
 
 # 开发文档
 
-每个文档以 `yaml` 格式添加，包含文档地址，官站(中文英文)，github地址等
+每个文档数据以 `yaml` 格式添加到 `markdown` 文件中，包含文档地址，官站(中文英文)，github地址等
