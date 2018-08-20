@@ -1,5 +1,5 @@
 ---
-layout: layout-LayoutDocs
+layout: Layout-Docs
 sidebar: false
 heroImage: /hero.png
 actionText: 去看看 →
