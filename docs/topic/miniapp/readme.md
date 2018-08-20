@@ -51,9 +51,9 @@ import api from '/config/api'
 import api from '../../config/api'
 ```
 
-- 微信引用变量数据要使用 `{{id}}`
+- 微信引用变量数据要使用 单/双**引号**
 
-```html
+```xml
 <view data-id={{id}}></view>
 
 // 要加引号
@@ -62,7 +62,7 @@ import api from '../../config/api'
 
 - 微信不能在布局模板里直接使用 `.toFixed(2)` 方法
 
-```html
+```xml
 // 推荐价格全部在js中计算，除非有布局方面要求
 <view>{{ (price * 0.01).toFixed(2) }}</view>
 
