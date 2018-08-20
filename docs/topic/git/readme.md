@@ -28,7 +28,9 @@ Pro Git 2
 
 ## 常用命令
 
-[**推荐**]Git 常用命令图表——[思维导图-Git.png](http://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png)
+- [**推荐**][Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+- Git 常用命令图表——[思维导图-Git.png](http://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png)
+- [Git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
 
 ```bash
 # clone
@@ -41,6 +43,13 @@ git remote add <别名> <远程版本库的URL>
 # 删除远程分支
 git remote rm <别名>
 ```
+
+## 工作流
+
+- [分布式-Git-分布式工作流程](git-scm.com/book/zh/v2/分布式-Git-分布式工作流程)
+- [高效git工作流](https://juejin.im/post/5b2b76e251882574934c388d)
+- [Git 工作流程](http://www.ruanyifeng.com/blog/2015/12/git-workflow.html)
+- [Git 使用规范流程](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)
 
 <!-- - 全局配置 git config
   - git config --global --list 查看全局配置
