@@ -1,7 +1,15 @@
 ---
-layout: Layout-Docs
-sidebar: false
-list:
+---
+
+# 知识库
+
+无论知识点还是文档，可以按照标签、话题分类知识点
+
+每个话题下的每个知识点，可以设定标签，之后可以以标签汇聚分类，用于筛选知识点
+
+这里需要一种在markdown里展示操作数据的形式
+
+<!-- list:
 - title: HTML
   logo: icons/html.svg
   link: /topic/html/
@@ -11,15 +19,15 @@ list:
 - title: JavaScript
   logo: icons/javascript.svg
   link: /topic/javascript/
+- title: NodeJS
+  logo: icons/nodejs.svg
+  link: /topic/nodejs/
 - title: 小程序
   logo: icons/miniapp.svg
   link: /topic/miniapp/
 - title: Git
   logo: icons/git.svg
   link: /topic/git/
-- title: NodeJS
-  logo: icons/nodejs.svg
-  link: /topic/nodejs/
 - title: Vue
   logo: icons/vue.svg
   link: /topic/vue/
@@ -43,13 +51,4 @@ list:
   link: /topic/safety/
 - title: 框架
   logo: icons/framework.svg
-  link: /topic/framework/
----
-
-# 知识点滴
-
-无论知识点还是文档，可以按照标签、话题分类知识点
-
-每个话题下的每个知识点，可以设定标签，之后可以以标签汇聚分类，用于筛选知识点
-
-这里需要一种在markdown里展示操作数据的形式
+  link: /topic/framework/ -->
