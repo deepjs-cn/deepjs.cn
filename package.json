@@ -61,6 +61,7 @@
     "escape-html": "^1.0.3",
     "file-loader": "^1.1.11",
     "fs-extra": "^5.0.0",
+    "gitalk": "^1.4.0",
     "globby": "^8.0.1",
     "gray-matter": "^4.0.1",
     "js-yaml": "^3.11.0",
@@ -107,8 +108,8 @@
     "eslint-plugin-vue-libs": "^3.0.0",
     "gh-pages": "^1.1.0",
     "lint-staged": "^7.0.4",
-    "vuepress-theme-vue": "^1.0.2",
     "vuepress-theme-ads": "^0.0.1",
+    "vuepress-theme-vue": "^1.0.2",
     "yorkie": "^1.0.3"
   },
   "engines": {

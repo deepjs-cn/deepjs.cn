@@ -10,7 +10,7 @@ const locales = {
     topic: '知识库',
     docs: '开发文档',
     community: '社区',
-    // favorite: '我的收藏',
+    favorite: '收藏夹',
   },
   // 'en': {
   //   site: {
@@ -63,10 +63,10 @@ module.exports = {
             text: '知识库',
             link: '/topic/'
           },
-          {
-            text: '开发文档',
-            link: '/docs/',
-          },
+          // {
+          //   text: '开发文档',
+          //   link: '/docs/',
+          // },
           // {
           //   text: '书籍',
           //   link: '/book/'
@@ -75,10 +75,10 @@ module.exports = {
             text: '社区',
             link: '/community/'
           },
-          // {
-          //   text: '我的收藏',
-          //   link: '/favorite/'
-          // },
+          {
+            text: '收藏夹',
+            link: '/favorite/'
+          },
         ],
         sidebar: {
           ...genSidebarConfig('zh-CN')
@@ -159,6 +159,15 @@ function genSidebarConfig(lang) {
           // 'frontend',
           // 'backend',
           // 'database',
+        ]
+      },
+    ],
+    '/favorite/': [
+      {
+        title: t['favorite'],
+        collapsable: true,
+        children: [
+          '',
         ]
       },
     ],

@@ -8,8 +8,8 @@
       </p>
     </div> -->
     <Content custom/>
-    <div class="tags" v-if="data.tags && data.tags.length">
-      <a class="tag" :href="`#${tag}`" v-for="tag in data.tags">{{tag}}</a>
+    <div class="tags" v-if="data.tags['全部']">
+      <a class="tag" :href="`#${key}`" v-for="(value, key) in data.tags">{{key}}({{value}})</a>
     </div>
     <div class="kit-list" v-if="data.list && data.list.length">
       <div class="item" v-for="item in data.list">
@@ -34,7 +34,21 @@ export default {
     data () {
       const data = this.$page.frontmatter;
       // 过滤所有数据提取对应的tags
-      data.tags = data.list && data.list[0] && data.list[0].tags || [];
+      data.tags = { '全部': 0 };
+      data.list.reduce((tags, item) => {
+        tags['全部'] += 1;
+        if (item.tags && Array.isArray(item.tags)) {
+          item.tags.forEach((tag, index) => {
+            if (!tags[tag]) {
+              tags[tag] = 1;
+            } else {
+              tags[tag] += 1;
+            }
+          });
+        }
+        return tags;
+      }, data.tags);
+      // data.tags = data.list && data.list[0] && data.list[0].tags || [];
       // data.tags.unshift('全部');
       return data
     },
@@ -52,7 +66,13 @@ export default {
 @import "~@default-theme/styles/config.styl"
 
 .tags
+  display flex
+  flex-wrap wrap
+  justify-content flex-start
+  align-items center
+
   .tag
+    box-sizing border-box
     appearance none
     display inline-flex
     justify-content center
@@ -61,18 +81,21 @@ export default {
     user-select none
     cursor pointer
     border 1px solid transparent
-    color inherit
-    // border-radius 0.25em
+    margin 0 0.5em 0.5em 0
+    padding 0 0.2em
+    // color inherit
     // box-shadow 0 0 0 0.125em rgba(32, 156, 238, 0.25)
 
-  .tag + .tag
-    margin-left 1em
+  // .tag + .tag
+    // margin-left 1em
 
-  a.tag:active
+  // a.tag:active
   a.tag:focus
-    color $accentColor
-    margin-bottom -2px
-    border-bottom 2px solid $accentColor
+    color #fff
+    border-radius 0.25em
+    // margin-bottom -2px
+    background $accentColor
+    // border-bottom 2px solid $accentColor
 
 .kit-list
   padding 1.2rem 0
