@@ -72,12 +72,12 @@ module.exports = {
           //   link: '/book/'
           // },
           {
-            text: '社区',
-            link: '/community/'
-          },
-          {
             text: '收藏夹',
             link: '/favorite/'
+          },
+          {
+            text: '社区',
+            link: '/community/'
           },
         ],
         sidebar: {

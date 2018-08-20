@@ -2,7 +2,7 @@
 home: true
 heroImage: /hero.png
 actionText: 去看看 →
-actionLink: /docs/
+actionLink: /topic/
 features:
 - title: 简洁至上
   details: 排版清晰，一目明了。
