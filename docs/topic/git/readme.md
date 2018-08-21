@@ -44,6 +44,22 @@ git remote add <别名> <远程版本库的URL>
 git remote rm <别名>
 ```
 
+## 配置别名
+
+配置路径 `~/.gitconfig`
+
+```conf
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  lg = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  mg = merge --no-ff
+```
+
 ## 工作流
 
 - [分布式-Git-分布式工作流程](git-scm.com/book/zh/v2/分布式-Git-分布式工作流程)

@@ -9,8 +9,10 @@ const locales = {
     news: '资讯',
     topic: '知识库',
     docs: '开发文档',
+    favorite: '收藏',
     community: '社区',
-    favorite: '收藏夹',
+    tags: '标签',
+    neitui: '内推',
   },
   // 'en': {
   //   site: {
@@ -72,12 +74,24 @@ module.exports = {
           //   link: '/book/'
           // },
           {
-            text: '收藏夹',
+            text: '收藏',
             link: '/favorite/'
+          },
+          {
+            text: '标签',
+            link: '/tags/'
           },
           {
             text: '社区',
             link: '/community/'
+          },
+          // {
+          //   text: '内推',
+          //   link: '/neitui/'
+          // },
+          {
+            text: '关于我们',
+            link: '/about'
           },
         ],
         sidebar: {
@@ -162,6 +176,16 @@ function genSidebarConfig(lang) {
         ]
       },
     ],
+    // '/tags/': [
+    //   {
+    //     title: t['tags'],
+    //     collapsable: true,
+    //     children: [
+    //       '',
+    //     ]
+    //   },
+    // ],
+    // '/tags',
     '/favorite/': [
       {
         title: t['favorite'],
@@ -173,9 +197,10 @@ function genSidebarConfig(lang) {
     ],
     // fallback
     '/': [
+      // ['', '首页'],        /* / */
       '',        /* / */
+      'about',   /* /about.html */
       'contact', /* /contact.html */
-      'about'    /* /about.html */
     ],
   };
 }
