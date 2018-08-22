@@ -44,18 +44,31 @@ module.exports = {
     ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
-  serviceWorker: true,
+  serviceWorker: {
+    updatePopup: true // Boolean | Object, 默认值是 undefined.
+  },
   // theme: 'ads',
   themeConfig: {
-    // repo: 'kitdocs/kitdocs.org',
-    lastUpdated: 'Last Updated', // string | boolean
+    repo: 'kitdocs/kitdocs.org',
     editLinks: true,
     docsDir: 'docs',
+    // #697 Provided by the official algolia team.
+    algolia: {
+      apiKey: 'e6bcd0241fa598b7462a1b6c542e979b',
+      indexName: 'kitdocs.org'
+    },
     locales: {
       '/': {
         label: '简体中文',
         selectText: '选择语言',
         editLinkText: '在 GitHub 上编辑此页',
+        lastUpdated: '上次更新',
+        serviceWorker: {
+          updatePopup: {
+            message: "发现新内容可用",
+            buttonText: "刷新"
+          }
+        },
         nav: [
           {
             text: '资讯',
@@ -102,6 +115,13 @@ module.exports = {
       //   label: 'English',
       //   selectText: 'Languages',
       //   editLinkText: 'Edit this page on GitHub',
+      //   lastUpdated: 'Last Updated',
+      //   serviceWorker: {
+      //     updatePopup: {
+      //       message: "New content is available.",
+      //       buttonText: "Refresh"
+      //     }
+      //   },
       //   nav: [
       //     {
       //       text: 'news',
@@ -157,7 +177,6 @@ function genSidebarConfig(lang) {
           'javascript/',
           'nodejs/',
           'ECMAScript/',
-          'promise/',
           'vue/',
           'algorithm/',
           'benchmark/',

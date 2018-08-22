@@ -10,5 +10,5 @@ features:
   details: 快速直达，操作便捷。
 - title: 高性能
   details: 静态化，以 SPA 运行。
-footer: Copyright © 2018-present cloudyan
+footer: Copyright © 2018-present Evan You
 ---

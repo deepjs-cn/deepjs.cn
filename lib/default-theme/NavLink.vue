@@ -3,7 +3,7 @@
     class="nav-link"
     :to="link"
     v-if="!isExternal(link)"
-    :exact="link === '/'"
+    :exact="exact"
   >{{ item.text }}</router-link>
   <a
     v-else
@@ -26,11 +26,20 @@ export default {
       required: true
     }
   },
+
   computed: {
     link () {
       return ensureExt(this.item.link)
+    },
+
+    exact () {
+      if (this.$site.locales) {
+        return Object.keys(this.$site.locales).some(rootLink => rootLink === this.link)
+      }
+      return this.link === '/'
     }
   },
+
   methods: {
     isExternal,
     isMailto,
