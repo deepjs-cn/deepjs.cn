@@ -138,4 +138,3 @@ export default {
       h2
         font-size 1.25rem
 </style>
-</style>

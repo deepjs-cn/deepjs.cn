@@ -17,6 +17,7 @@
     background-color $codeBgColor
     border-radius 6px
     overflow auto
+    white-space pre-wrap
     code
       color #fff
       padding 0
@@ -100,21 +101,17 @@ for lang in $codeLang
     &:before
       content ('' + lang)
 
-div[class~="language-javascript"]
-  &:before
-    content "js"
+div[class~="language-javascript"]:before
+  content "js"
 
-div[class~="language-typescript"]
-  &:before
-    content "ts"
+div[class~="language-typescript"]:before
+  content "ts"
 
-div[class~="language-markup"]
-  &:before
-    content "html"
+div[class~="language-markup"]:before
+  content "html"
 
-div[class~="language-markdown"]
-  &:before
-    content "md"
+div[class~="language-markdown"]:before
+  content "md"
 
 div[class~="language-json"]:before
   content "json"

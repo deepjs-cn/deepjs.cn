@@ -13,6 +13,7 @@ const locales = {
     community: '社区',
     tags: '标签',
     neitui: '内推',
+    markdown: 'Markdown',
   },
   // 'en': {
   //   site: {
@@ -28,6 +29,30 @@ const locales = {
 }
 
 module.exports = {
+  markdown: {
+    config: md => {
+      md.set({ breaks: true })
+      md.use(require('markdown-it-mark'))
+      md.use(require('markdown-it-checkbox'))
+      md.use(require('markdown-it-deflist'))
+      // md.use(require('markdown-it-prettier'))
+      // // md.use(require('markdown-it-mathjax'))
+      // md.use(require('markdown-it-highlightjs'))
+      // md.use(require("markdown-it-mermaid"), {
+
+      // })
+      md.use(require("markdown-it-katex"))
+      md.use(require("markdown-it-plantuml"))
+      // https://stackedit.io/app#
+      // https://www.npmjs.com/package/katex
+      // md.use(require('katex'))
+      // https://www.npmjs.com/package/mermaid
+      // md.use(require('mermaid'))
+      // https://mermaidjs.github.io/gantt.html
+      // md.use(require('markdown-it-mermaid-pro'))
+      // md.use(require('@iktakahiro/markdown-it-katex'))
+    }
+  },
   dest: 'dist',
   locales: {
     '/': locales['zh-CN'].site,
@@ -49,6 +74,7 @@ module.exports = {
   },
   // theme: 'ads',
   themeConfig: {
+    sidebarDepth: 3,
     repo: 'kitdocs/kitdocs.org',
     editLinks: true,
     docsDir: 'docs',
@@ -94,10 +120,10 @@ module.exports = {
             text: '标签',
             link: '/tags/'
           },
-          {
-            text: '社区',
-            link: '/community/'
-          },
+          // {
+          //   text: '社区',
+          //   link: '/community/'
+          // },
           // {
           //   text: '内推',
           //   link: '/neitui/'
@@ -180,6 +206,8 @@ function genSidebarConfig(lang) {
           'vue/',
           'algorithm/',
           'benchmark/',
+          'performance/',
+          'markdown/',
         ]
       },
     ],
@@ -220,6 +248,7 @@ function genSidebarConfig(lang) {
       '',        /* / */
       'about',   /* /about.html */
       'contact', /* /contact.html */
+      'weekly',  /* /weekly.html */
     ],
   };
 }
