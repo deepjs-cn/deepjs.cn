@@ -209,7 +209,10 @@ J = F^2  = B^3^2   = A^^3^2
 工作流英文名称叫做“workflow”，高效的工作流能像流水一样让这个工作体验顺畅且自然。
 
 所以制定一套规范有效的git工作流来规范我们的分支管理和工作流程是极其必要的，并且越早越好。
-、
+
+我们的工作流，请使用下面的规范流程
+
+![my-gitflow](./img/my-gitflow.png)
 
 ### Git 使用规范流程
 
@@ -244,12 +247,15 @@ J = F^2  = B^3^2   = A^^3^2
     ```
 4. 与主干同步
     ```bash
+    # 以下操作方式待定
     # 分支的开发过程中，要经常与主干保持同步
     $ git fetch origin
+    # 或
     $ git rebase origin/master
     ```
 5. 合并commit
     ```bash
+    # 以下操作待定!!! 合并暂定为 git merge --no-ff
     # 分支开发完成后，很可能有一堆commit，但是合并到主干的时候，往往希望只有一个（或最多两三个）commit，这样不仅清晰，也容易管理。
     # 那么，怎样才能将多个commit合并呢？这就要用到 git rebase 命令。
 
@@ -266,14 +272,18 @@ J = F^2  = B^3^2   = A^^3^2
 6. 推送到远程仓库
     ```bash
     # 合并commit后，就可以推送当前分支到远程仓库了
+    $ git push
+    # 不要使用 --force
     $ git push --force origin
     ```
 7. 发出Pull Request
     ```bash
     # 提交到远程仓库以后，就可以发出 Pull Request 到发布分支release，
     # 然后请求别人进行代码review，确认可以合并到release
-    $ git push --force origin dev_xxx
+    $ git push
     ```
+8. 至少两人code review，之后完成合并
+9. 新增tag标签，发布上线
 
 ## 进阶
 
