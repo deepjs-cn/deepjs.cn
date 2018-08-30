@@ -27,12 +27,13 @@ Pro Git 2
 
 ## 安装
 
-### 客户端 [GUI](https://www.git-scm.com/downloads/guis/)
+### 客户端
 
-推荐的客户端
+强烈推荐使用命令行操作，可以配合一个图形化界面偶尔做对比代码或查看历史使用
 
 - [**推荐**]命令行 [https://www.git-scm.com/download/](https://www.git-scm.com/download/)
 - 图形化界面
+  - 几乎所有的 [GUI Clients](https://www.git-scm.com/downloads/guis/)，以下推荐两款
   - Window - TortoiseGit [https://download.tortoisegit.org/tgit/](https://download.tortoisegit.org/tgit/)
   - Mac - Sourcetree [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/)
 
@@ -43,7 +44,7 @@ Pro Git 2
 - [Git 与 github 操作指南](https://github.com/webcoding/useGit)
 - [图形化软件TortoiseGit与github网站关联](https://github.com/webcoding/useGit#图形化软件tortoisegit与github网站关联)
 
-## 多账号绑定问题
+## 多账号配置问题
 
 令不同 Host 实际映射到同一 HostName，但密钥文件不同。Host 前缀可自定义如xxx。配置文件 `.ssh/config`，
 
@@ -166,14 +167,14 @@ git stash pop
 git stash clear
 ```
 
-## 关于 `HEAD^` `HEAD~` 和 `HEAD@{2}`
+## 关于 `HEAD^` 和 `HEAD~`
 
 首先，Git 提交可以有多个父级，使用 `^` 你可以找到任何提交的父级，而不仅仅是HEAD。你也可以追溯到几代人，使用 `~`。
 
 - HEAD^ 表示当前分支的提交的第一个父级，是 HEAD^1 的缩写
 - HEAD~ 意味着主分支的祖父母，在歧义的情况下支持第一个父母
 - 这些说明符可以被任意连接，例如，topic~3^2。
-- 而HEAD@{}变量捕获HEAD运动的历史，用于git reflog或git stash list
+- 而HEAD@{2}变量捕获HEAD运动的历史，用于git reflog或git stash list
 
 为了有一个直观的表示，让我们引用[文档](http://schacon.github.io/git/git-rev-parse#_specifying_revisions)的一部分：
 
