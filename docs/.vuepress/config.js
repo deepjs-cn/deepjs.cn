@@ -14,6 +14,7 @@ const locales = {
     tags: '标签',
     neitui: '内推',
     markdown: 'Markdown',
+    feature: 'feature',
   },
   // 'en': {
   //   site: {
@@ -29,6 +30,25 @@ const locales = {
 }
 
 module.exports = {
+  chainWebpack: (config, isServer) => {
+    if (!isServer) {
+      // 修改客户端的 webpack 配置
+    }
+    console.log(config);
+    config.module
+      .rule('webp')
+      .test(/\.webp$/)
+      .use('webp-loader')
+        .loader('webp-loader')
+        .end()
+
+    config.module
+      .rule('webp')
+      .test(/\.webp$/)
+      .use('file-loader')
+        .loader('file-loader')
+        .end()
+  },
   markdown: {
     config: md => {
       md.set({ breaks: true })
@@ -196,6 +216,7 @@ function genSidebarConfig(lang) {
         collapsable: true,
         children: [
           '',
+          'growth/',
           'miniapp/',
           'git/',
           'html/',
@@ -208,6 +229,13 @@ function genSidebarConfig(lang) {
           'benchmark/',
           'performance/',
           'markdown/',
+          // 'test/',
+          // 'vim/',
+          // 'nodejs/',
+          // 'rxjs/',
+          // 'linux/',
+          // 'browser/',
+          // 'http/',
         ]
       },
     ],
