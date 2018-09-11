@@ -34,7 +34,6 @@ module.exports = {
     if (!isServer) {
       // 修改客户端的 webpack 配置
     }
-    console.log(config);
     config.module
       .rule('webp')
       .test(/\.webp$/)
