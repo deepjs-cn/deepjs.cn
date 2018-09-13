@@ -6,7 +6,7 @@
 
 |Weekly | Theme | Owner | Date |
 |------ |:-----:| -----:| ----:|
-| 第一期  | Git规范流程和分支管理  | 晓寒 | 2018-08-28 |
+| 第一期  | [Git规范流程和分支管理](/topic/git/)  | 晓寒 | 2018-08-28 |
 | 第二期  | vue.js-入门指南  | 勿乞 | 2018-09-03 |
 | 第三期  | css3动画高级用法  | 土豆 | 2018-09-11 |
 | 第四期  | JS数组和对象的高级用法  | 小康 | 2018-09-18 |
@@ -31,7 +31,7 @@
   - 工具类
 - webkit 内核
 - websocket
-- 算法
+- 算法(数据结构、算法等)
 - React Native
 - HTML5 canvas 游戏
 - css3 动画 H5广告
@@ -62,6 +62,7 @@
 - Nginx
   - 反向代理
 - H5性能优化
+- ES6等新语法适用场景
 
 https://github.com/RedrockTeam/article/issues/3
 
