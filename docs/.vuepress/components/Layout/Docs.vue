@@ -32,7 +32,7 @@ export default {
   components: { NavLink },
   computed: {
     data () {
-      const data = this.$page.frontmatter;
+      const data = this.$page.frontmatter || {};
       // 过滤所有数据提取对应的tags
       data.tags = { '全部': 0 };
       data.list.reduce((tags, item) => {
@@ -50,7 +50,7 @@ export default {
       }, data.tags);
       // data.tags = data.list && data.list[0] && data.list[0].tags || [];
       // data.tags.unshift('全部');
-      return data
+      return data;
     },
     actionLink () {
       return {

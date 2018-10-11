@@ -10,7 +10,9 @@
 
 微信**小程序开发助手**，更方便快捷地查看和预览小程序
 
-![小程序开发助手](https://mp.weixin.qq.com/debug/wxadoc/dev/image/devtools2/mydev/mydev-qrcode.jpg?t=2018228)
+![微信小程序开发助手](https://mp.weixin.qq.com/debug/wxadoc/dev/image/devtools2/mydev/mydev-qrcode.jpg?t=2018228)
+
+![支付宝小程序开发助手](https://gw.alipayobjects.com/zos/skylark-tools/public/files/a380a8c8d56b91fd6939f4a6a96e126d.png)
 
 ## 常见问题
 
