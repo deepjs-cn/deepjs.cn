@@ -1,6 +1,6 @@
 {
   "name": "kitdocs.org",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "致力于提供最新最全的【文档库】及其活跃社区",
   "main": "lib/index.js",
   "bin": {
