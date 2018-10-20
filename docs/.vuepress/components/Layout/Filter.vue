@@ -9,6 +9,10 @@
       </p>
     </div>
     <Content custom/>
+    <!-- 搜索题目 名称、内容 或 编号 -->
+    <!-- 题名 解答 通过率 难度（相关话题，相似题目） -->
+    <!-- 入门、简单、中等、困难 -->
+    <!-- 分类 算法/数据库/Shell -->
     <!-- <div class="tags" v-if="data.tags['全部']">
       <a class="tag" :href="`#${key}`" v-for="(value, key) in data.tags">{{key}}({{value}})</a>
     </div>
