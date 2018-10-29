@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+#content {
+  position: relative;
+  white-space: pre-line;
+}
+  </style>
+</head>
+<body>
+  <div id="content"></div>
+  <pre>
+// 1
+console.log("script start");
+
+setTimeout(function () {
+    console.log("setTimeout");
+}, 1000);
+
+console.log("script end");
+
+
+// 2
+console.log("script start");
+
+setTimeout(function () {
+    console.log("setTimeout");
+}, 0);
+
+console.log("script end");
+  </pre>
+  <script>
+(function() {
+	var Content = {};
+	Content.println = (function(argument) {
+		var dom = document.getElementById("content");
+		return function(text) {
+			var textNode = document.createTextNode(text + "\n");
+			dom.appendChild(textNode);
+		}
+	})();
+	Content.println("script start");
+	setTimeout(function () {
+		Content.println("setTimeout");
+	}, 1000);
+	Content.println("script end");
+})();
+  </script>
+</body>
+</html>

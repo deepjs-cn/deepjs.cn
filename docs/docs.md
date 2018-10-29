@@ -1,0 +1,22 @@
+# 参考文档
+
+- css scoped VS css modules
+  - https://www.w3cplus.com/vue/scoped-styles-vs-css-modules.html
+- Promise
+  - https://developers.google.com/web/fundamentals/primers/promises
+  - 从Promise来看JavaScript中的Event Loop、Tasks和Microtasks https://github.com/creeperyang/blog/issues/21
+  - https://cnodejs.org/topic/560dbc826a1ed28204a1e7de
+  - https://github.com/chemdemo/promiseA/blob/master/lib/Promise.js
+  - 深入理解 JavaScript 事件循环（一）— event loop https://www.cnblogs.com/dong-xu/p/7000163.html
+  - 深入理解 JavaScript 事件循环（二）— task and microtask https://www.cnblogs.com/dong-xu/p/7000139.html
+  - https://www.w3.org/TR/2017/REC-html52-20171214/webappapis.html#event-loops
+- 排序算法
+  - https://www.cnblogs.com/dong-xu/p/7088447.html
+- 继承
+  - https://www.cnblogs.com/dong-xu/p/7134195.html
+- 正则表达式
+  - https://www.cnblogs.com/dong-xu/p/6926064.html
+- Async
+  - https://developers.google.com/web/fundamentals/primers/async-functions
+- Service worker
+  - https://developers.google.com/web/fundamentals/primers/service-workers/

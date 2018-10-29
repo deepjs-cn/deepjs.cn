@@ -152,10 +152,13 @@ $ git cherry-pick [commit]
 
 # 删除分支
 $ git branch -d [branch-name]
+# 紧接着删除远程
+$ git push origin :[branch-name]
 
 # 删除远程分支
 $ git push origin --delete [branch-name]
 $ git branch -dr [remote/branch]
+# 示例 git branch -D -r origin/dev
 ```
 
 - 标签

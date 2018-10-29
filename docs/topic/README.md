@@ -8,6 +8,14 @@
 
 这里需要一种在markdown里展示操作数据的形式
 
+以下为关注方向，如开发流程
+
+- 前后端分离开发流程
+  - https://segmentfault.com/a/1190000009329474
+  - https://segmentfault.com/a/1190000002413526
+  - 契约优先（contract first） MockServer
+- TDD 测试驱动开发
+
 <!-- list:
 - title: HTML
   logo: icons/html.svg
