@@ -13,7 +13,7 @@
 |  5 | HTTP请求入门  | 家胜 | 2018-09-26 |
 |  6 | css scoped VS css modules | 1week 2018-10-30
 |    | event loop & task vs microtask | 2018-10-30
-|  7 | html&css 规范 | 勿乞 | 2week 2018-11-06
+|  7 | html&css 规范 | 勿乞 | 2week 2018-11-08
 |  8 | 小游戏 | 土豆 | 2week 2018-11-13
 |  9 | webpack 用法及配置 | 小康 | 3week 2018-11-20
 | 10 | HTTP 深入理解 | 家胜 | 3week 2018-11-27
@@ -23,7 +23,7 @@
 |   | 算法-1 排序算法   |
 |   | 前后端分离 MockServer |
 |   | 数据统计方案 |
-|   | Nginx 反向代理等 |
+|   | Nginx 入门 |
 |   | 调试手段 |
 |   | 异步函数 Async |
 |   | serviceWorker |
@@ -34,11 +34,19 @@
 |   | 流畅的动画 |
 |   | Grid 布局 |
 |   | Linux常用命令  | 家胜 |  |
+|   | POSTMAN 入门 | 晓寒 |
+|   | Vim 入门 | 晓寒 |
+|   | js.tensorflow.org | |
+|   | Charles 操作技巧 |  |
+|   | 搭建企业内部私有 npm 仓库  |  |
+|   | 工具类  |
 
 html&css 规范 志飞
 canvas 截图 李博
 
 - https://nginx.org/en/
+- [postman](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables)
+- [mockserver](https://my.oschina.net/xbl/blog/2246297)
 
 ## 周总结
 
