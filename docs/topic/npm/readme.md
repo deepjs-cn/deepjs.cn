@@ -35,7 +35,9 @@
   - npm
     - `npm list -g --depth=0`
     - `npm i -g xxx`
-  - yarn `yarn global add xxx`
+  - yarn
+    - `yarn global add xxx`
+    - Yarn 升级 `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
   - n 管理 nodejs 版本 `n list`
   - nrm 管理npm源（或镜像源）`nrm list`
   - 基于 nodejs 启动一个本地 http 服务

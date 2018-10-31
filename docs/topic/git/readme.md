@@ -24,6 +24,7 @@ Pro Git 2
 还可以参考一个比较全的教程
 - [Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 - [git-recipes](https://github.com/geeeeeeeeek/git-recipes/wiki)
+- [Git教程](https://www.yiibai.com/git/)
 
 ## 安装
 
@@ -137,8 +138,12 @@ git checkout -
 git merge <branch>
 
 git branch -d <branch>
-git branch -dr <remote/branch>
-git push origin --delete <remote-branch>
+
+# gitlab codereview 后，经常删除了远程分支，但本地还存在 remote-tracking
+# 如何批量删除跟踪?
+# Deleted remote-tracking branch origin/xxx (was 141f40c).
+git branch -rd <remote/xxx>
+git push origin --delete <remote-xxx>
 
 git tag
 git tag [tag] [commit]

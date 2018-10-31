@@ -44,6 +44,27 @@
 html&css 规范 志飞
 canvas 截图 李博
 
+一个月至少完成一次技术分享，也可以安排自己的学习计划，以及选择分享周期
+
+- 每周分享
+- 每两周分享
+- 每三周分享
+- 每月分享
+
+周期内完成分享一次加2分，未完成则减1分，考核分数占比10%。
+
+- 业绩 80%
+  - 周期提验
+  - 线上 Bug 数
+  - 线上问题处理时效
+  - 沟通能力
+- 行为 20%
+  - 10% 技术分享
+  - 10% 及时发现、解决重大问题
+
+
+以后前端福利按照分数百分比分配。
+
 - https://nginx.org/en/
 - [postman](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables)
 - [mockserver](https://my.oschina.net/xbl/blog/2246297)
