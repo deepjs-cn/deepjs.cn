@@ -1,19 +1,19 @@
-# Glossary
+# 术语
 
-## User side
+## 用户端
 
-| Name          | Description                                                                                                                  |
-|:--------------|:-----------------------------------------------------------------------------------------------------------------------------|
-| `permalink`   | The URL used by the current page, i.e., the value of `$page.path`.                                                           |
-| `regularPath` | The URL of the current page based on directory structure, i.e., the value of `$page.regularPath`.                            |
-| `frontmatter` | Configuration wrapped in `---` in the `markdown` file of the current page, which is used to do some page-level configuration |
-| `headers`     | i.e. those titles defined by one or more `#` in the  `markdown` file.                                                        |
-| `siteConfig`  | i.e. `.vuepress/config.js`.                                                                                                  |
-| `themeConfig` | i.e. `themeConfig` value of `.vuepress/config.js`.                                                                           |
+|      名称      |                               描述                               |
+|:--------------|:----------------------------------------------------------------|
+| `permalink`   | 当前页面最终使用的 URL，即 `$page.path` 的值                          |
+| `regularPath` | 当前页面基于目录结构生成的 URL，即 `$page.regularPath` 的值             |
+| `frontmatter` | 当前页面的 `markdown` 文件中包裹在 `---` 中的配置，用于做一些页面级别的配置 |
+| `headers`     | 即 `markdown` 中那些以一个或多个 `#` 定义的标题                        |
+| `siteConfig`  | 即 `.vuepress/config.js`                                        |
+| `themeConfig` | 即 `.vuepress/config.js` 中 `themeConfig` 的值                    |
 
-## Theme Side
+## 主题端
 
-| Name             | Description                                         |
-|:-----------------|:----------------------------------------------------|
-| `themePath`      | The root path of the current theme (Absolute path). |
-| `themeEntryFile` | The theme configuration file (`themePath/index.js`) |
+| 名称              | 描述                                |
+|:-----------------|:-----------------------------------|
+| `themePath`      | 当前使用的主题的根路径（绝对路径）         |
+| `themeEntryFile` | 主题的配置文件 (`themePath/index.js`) |

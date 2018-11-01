@@ -43,7 +43,7 @@ module.exports = [
     text: '了解更多',
     items: [
       {
-        text: '关于',
+        // text: '关于',
         // link: '/about/about.html', // 此处无效
         items: [
           {
