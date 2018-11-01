@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="content">
+    <div class="code-source">var button = document.getElementById("button");
+
+function foo(){
+console.log("foo");
+}
+
+button.addEventListener("click", function (event) {
+setTimeout(function (){
+console.log("setTimeout");
+}, 0);
+
+foo();
+}, false);</div>
+    <div class="tasks queue-wrapper">
+      <div id="task-title" class="queue-title">event queue</div>
+      <div id="task-content" class="queue-content"></div>
+    </div>
+    <div class="js-stack queue-wrapper">
+      <div id="stack-title" class="queue-title">JS stack</div>
+      <div id="stack-content" class="queue-content"></div>
+    </div>
+    <div class="log queue-wrapper">
+      <div id="log-title" class="queue-title">log</div>
+      <div id="log-content" class="queue-content"></div>
+    </div>
+    <div class="result-window">
+      <button id="test-btn">click me</button>
+    </div>
+    <div class="cycle-icon"></div>
+    <div class="web-api">
+      <div class="web-api-title">Web APIs</div>
+      <div class="web-api-item">click listener (anonymous)</div>
+    </div>
+    <div class="alert-window"></div>
+  </div>
+</body>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+</html>
