@@ -142,7 +142,7 @@ git branch -d <branch>
 # gitlab codereview 后，经常删除了远程分支，但本地还存在 remote-tracking
 # 如何批量删除跟踪?
 # Deleted remote-tracking branch origin/xxx (was 141f40c).
-git branch -rd <remote/xxx>
+git branch -rd <remote/xxx> # 仅仅删除远程跟踪
 git push origin --delete <remote-xxx>
 
 git tag
