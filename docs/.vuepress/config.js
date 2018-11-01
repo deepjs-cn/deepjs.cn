@@ -1,6 +1,6 @@
 
 const locales = {
-  'zh-CN': {
+  'zh': {
     site: {
       lang: 'zh-CN',
       title: 'KitDocs.org',
@@ -30,6 +30,73 @@ const locales = {
 }
 
 module.exports = {
+  dest: 'dist',
+  locales: {
+    '/': locales['zh'].site,
+    // '/en': locales['en'].site,
+  },
+  head: [
+    ['link', { rel: 'icon', href: `/logo.png` }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'apple-touch-icon', href: `/icons/apple-touch-icon-152x152.png` }],
+    ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+  ],
+  serviceWorker: {
+    updatePopup: true // Boolean | Object, 默认值是 undefined.
+  },
+  // theme: 'ads',
+  themeConfig: {
+    sidebarDepth: 3,
+    repo: 'kitdocs/kitdocs.org',
+    editLinks: true,
+    docsDir: 'docs',
+    // #697 Provided by the official algolia team.
+    algolia: {
+      apiKey: 'e6bcd0241fa598b7462a1b6c542e979b',
+      indexName: 'kitdocs.org',
+    },
+    locales: {
+      '/': {
+        label: '简体中文',
+        selectText: '选择语言',
+        editLinkText: '在 GitHub 上编辑此页',
+        lastUpdated: '上次更新',
+        serviceWorker: {
+          updatePopup: {
+            message: "发现新内容可用",
+            buttonText: "刷新"
+          }
+        },
+        nav: require('./nav/zh'),
+        // sidebar: {
+        //   '/news/': getGuideSidebar('指南', '深入'),
+        //   '/topic/': getPluginSidebar('插件', '介绍'),
+        //   // '/theme/': getThemeSidebar('主题', '介绍'),
+        // },
+        sidebar: {
+          ...genSidebarConfig('zh'),
+        },
+      },
+    },
+  },
+  // yarn add @vuepress/plugin-i18n-ui @vuepress/plugin-back-to-top @vuepress/plugin-pwa @vuepress/plugin-medium-zoom @vuepress/plugin-notification flowchart --dev
+  plugins: {
+    // '@vuepress/plugin-i18n-ui': true,
+    '@vuepress/plugin-back-to-top': true,
+    '@vuepress/plugin-pwa': {
+      serviceWorker: true,
+      updatePopup: true
+    },
+    '@vuepress/plugin-medium-zoom': true,
+    '@vuepress/plugin-notification': true,
+    'flowchart': true
+  },
+  // clientRootMixin: path.resolve(__dirname, 'mixin.js')
   chainWebpack: (config, isServer) => {
     if (!isServer) {
       // 修改客户端的 webpack 配置
@@ -73,137 +140,6 @@ module.exports = {
       // md.use(require('@iktakahiro/markdown-it-katex'))
     }
   },
-  dest: 'dist',
-  locales: {
-    '/': locales['zh-CN'].site,
-    // '/en': locales['en'].site,
-  },
-  head: [
-    ['link', { rel: 'icon', href: `/logo.png` }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'apple-touch-icon', href: `/icons/apple-touch-icon-152x152.png` }],
-    ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
-    ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
-  ],
-  serviceWorker: {
-    updatePopup: true // Boolean | Object, 默认值是 undefined.
-  },
-  // theme: 'ads',
-  themeConfig: {
-    sidebarDepth: 3,
-    repo: 'kitdocs/kitdocs.org',
-    editLinks: true,
-    docsDir: 'docs',
-    // #697 Provided by the official algolia team.
-    algolia: {
-      apiKey: 'e6bcd0241fa598b7462a1b6c542e979b',
-      indexName: 'kitdocs.org'
-    },
-    locales: {
-      '/': {
-        label: '简体中文',
-        selectText: '选择语言',
-        editLinkText: '在 GitHub 上编辑此页',
-        lastUpdated: '上次更新',
-        serviceWorker: {
-          updatePopup: {
-            message: "发现新内容可用",
-            buttonText: "刷新"
-          }
-        },
-        nav: [
-          {
-            text: '资讯',
-            link: '/news/'
-          },
-          {
-            text: '知识库',
-            link: '/topic/'
-          },
-          // {
-          //   text: '开发文档',
-          //   link: '/docs/',
-          // },
-          // {
-          //   text: '书籍',
-          //   link: '/book/'
-          // },
-          // {
-          //   text: '收藏',
-          //   link: '/favorite/'
-          // },
-          // {
-          //   text: '标签',
-          //   link: '/tags/'
-          // },
-          // {
-          //   text: '代码片段',
-          //   link: '/code/'
-          // },
-          // {
-          //   text: '问题',
-          //   link: '/questions/'
-          // },
-          // {
-          //   text: '社区',
-          //   link: '/community/'
-          // },
-          // {
-          //   text: '内推',
-          //   link: '/neitui/'
-          // },
-          {
-            text: '关于我们',
-            link: '/about'
-          },
-        ],
-        sidebar: {
-          ...genSidebarConfig('zh-CN')
-        },
-      },
-      // '/en': {
-      //   label: 'English',
-      //   selectText: 'Languages',
-      //   editLinkText: 'Edit this page on GitHub',
-      //   lastUpdated: 'Last Updated',
-      //   serviceWorker: {
-      //     updatePopup: {
-      //       message: "New content is available.",
-      //       buttonText: "Refresh"
-      //     }
-      //   },
-      //   nav: [
-      //     {
-      //       text: 'news',
-      //       link: '/news/'
-      //     },
-      //     {
-      //       text: 'topic',
-      //       link: '/topic/'
-      //     },
-      //     {
-      //       text: 'docs',
-      //       link: '/docs/',
-      //     },
-      //     // {
-      //     //   text: 'book',
-      //     //   link: '/book/'
-      //     // },
-      //     {
-      //       text: 'community',
-      //       link: '/community/'
-      //     },
-      //   ],
-      //   sidebar: {
-      //     ...genSidebarConfig('zh-CN')
-      //   },
-      // },
-    }
-  }
 }
 
 function genSidebarConfig(lang) {
@@ -223,6 +159,7 @@ function genSidebarConfig(lang) {
         title: t['topic'],
         collapsable: true,
         children: [
+          ['', '介绍'],
           '',
           'growth/',
           'miniapp/',
@@ -279,12 +216,12 @@ function genSidebarConfig(lang) {
       },
     ],
     // fallback
-    '/': [
-      // ['', '首页'],        /* / */
-      '',        /* / */
-      'about',   /* /about.html */
-      'contact', /* /contact.html */
-      'weekly',  /* /weekly.html */
-    ],
+    // '/': [
+    //   // ['', '首页'],        /* / */
+    //   '',        /* / */
+    //   'about',   /* /about.html */
+    //   'contact', /* /contact.html */
+    //   'weekly',  /* /weekly.html */
+    // ],
   };
 }
