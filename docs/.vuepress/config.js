@@ -132,14 +132,14 @@ module.exports = {
           //   text: '书籍',
           //   link: '/book/'
           // },
-          {
-            text: '收藏',
-            link: '/favorite/'
-          },
-          {
-            text: '标签',
-            link: '/tags/'
-          },
+          // {
+          //   text: '收藏',
+          //   link: '/favorite/'
+          // },
+          // {
+          //   text: '标签',
+          //   link: '/tags/'
+          // },
           {
             text: '代码片段',
             link: '/code/'
