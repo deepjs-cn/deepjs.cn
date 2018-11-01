@@ -140,14 +140,14 @@ module.exports = {
           //   text: '标签',
           //   link: '/tags/'
           // },
-          {
-            text: '代码片段',
-            link: '/code/'
-          },
-          {
-            text: '问题',
-            link: '/questions/'
-          },
+          // {
+          //   text: '代码片段',
+          //   link: '/code/'
+          // },
+          // {
+          //   text: '问题',
+          //   link: '/questions/'
+          // },
           // {
           //   text: '社区',
           //   link: '/community/'
