@@ -31,11 +31,11 @@
 </template>
 
 <script>
-import NavLink from '@default-theme/NavLink.vue'
+// import NavLink from '@default-theme/NavLink.vue'
 // import logo from '@/questions/img/logo.jpg';
 
 export default {
-  components: { NavLink },
+  // components: { NavLink },
   computed: {
     data () {
       return {
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import "~@default-theme/styles/config.styl"
+// @import "~@default-theme/styles/config.styl"
 
 .tags
   display flex

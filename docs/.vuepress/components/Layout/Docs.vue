@@ -14,7 +14,7 @@
     <div class="kit-list" v-if="data.list && data.list.length">
       <div class="item" v-for="item in data.list">
         <h2 v-if="item.link">
-          <NavLink :item="{link: item.link, text: item.title}" />
+          <!-- <NavLink :item="{link: item.link, text: item.title}" /> -->
         </h2>
         <p>{{ item.desc }}</p>
       </div>
@@ -26,10 +26,10 @@
 </template>
 
 <script>
-import NavLink from '@default-theme/NavLink.vue'
+// import NavLink from '@default-theme/NavLink.vue'
 
 export default {
-  components: { NavLink },
+  // components: { NavLink },
   computed: {
     data () {
       const data = this.$page.frontmatter || {};
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import "~@default-theme/styles/config.styl"
+// @import "~@default-theme/styles/config.styl"
 
 .tags
   display flex

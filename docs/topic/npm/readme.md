@@ -40,6 +40,9 @@
     - Yarn 升级 `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
   - n 管理 nodejs 版本 `n list`
   - nrm 管理npm源（或镜像源）`nrm list`
+  - npx 一个npm包执行器
+    - 临时安装可执行依赖包，不用全局安装，不用担心长期的污染。
+    - 可以执行依赖包中的命令，安装完成自动运行
   - 基于 nodejs 启动一个本地 http 服务
     - http-server `hs dist -p 8090 -o`
     - serve `serve dist -l 3040`

@@ -51,17 +51,18 @@ module.exports = {
   markdown: {
     config: md => {
       md.set({ breaks: true })
-      md.use(require('markdown-it-mark'))
-      md.use(require('markdown-it-checkbox'))
-      md.use(require('markdown-it-deflist'))
+      // md.use(require('markdown-it-mark'))
+      // md.use(require('markdown-it-checkbox'))
+      // md.use(require('markdown-it-deflist'))
+      // md.use(require("markdown-it-katex"))
+      // md.use(require("markdown-it-plantuml"))
+
       // md.use(require('markdown-it-prettier'))
       // // md.use(require('markdown-it-mathjax'))
       // md.use(require('markdown-it-highlightjs'))
       // md.use(require("markdown-it-mermaid"), {
 
       // })
-      md.use(require("markdown-it-katex"))
-      md.use(require("markdown-it-plantuml"))
       // https://stackedit.io/app#
       // https://www.npmjs.com/package/katex
       // md.use(require('katex'))
