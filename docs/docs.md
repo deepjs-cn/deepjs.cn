@@ -20,3 +20,6 @@
   - https://developers.google.com/web/fundamentals/primers/async-functions
 - Service worker
   - https://developers.google.com/web/fundamentals/primers/service-workers/
+- zsh
+  - [参考](https://leohxj.gitbooks.io/a-programmer-prepares/software/mac/softwares/zsh.html)
+  - https://zhuanlan.zhihu.com/p/19556676
