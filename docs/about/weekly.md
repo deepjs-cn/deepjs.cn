@@ -19,18 +19,21 @@
 |  6 | css scoped VS css modules | 晓寒 | 1week 2018-10-30
 |  7 | html&css 规范 | 勿乞 | 2week 2018-11-08
 |  8 | 小游戏 | 土豆 | 2week 2018-11-13
-|    | event loop & task vs microtask | 晓寒 | 2018-11-16
+|    | event loop & task vs microtask |  | 2018-11-16
 |  9 | webpack 用法及配置 | 小康 | 3week 2018-11-20
-|    | 云开发 | 晓寒 | 1week 2018-12-23
+|    | 云开发 |  | 1week 2018-12-23
 | 10 | HTTP 深入理解 | 家胜 | 3week 2018-11-27
-|    | | | 1week
+|    | Vim 入门 |  | 1week 2018-11-30
 | 11 | canvas 动画、截图 | 小博 | 2week 2018-12-04
+|    | Charles 操作技巧 |  | 1week 2018-12-07
 | 12 | TypeScript 入门 | 小强 | 2week 2018-12-11
+|   | Nginx 入门 |  | 1week 2018-12-14
 |   | Promise |
+|   | Linux常用命令  | 家胜 |  |
+|   | POSTMAN 入门 | 晓寒 |
 |   | 算法-1 排序算法   |
 |   | 前后端分离 MockServer |
 |   | 数据统计方案 |
-|   | Nginx 入门 |
 |   | 调试手段 |
 |   | 异步函数 Async |
 |   | serviceWorker |
@@ -40,11 +43,7 @@
 |   | 性能分析 - 渲染性能 |
 |   | 流畅的动画 |
 |   | Grid 布局 |
-|   | Linux常用命令  | 家胜 |  |
-|   | POSTMAN 入门 | 晓寒 |
-|   | Vim 入门 | 晓寒 |
 |   | js.tensorflow.org | |
-|   | Charles 操作技巧 |  |
 |   | 搭建企业内部私有 npm 仓库  |  |
 |   | 工具类  |
 
