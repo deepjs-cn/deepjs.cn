@@ -14,6 +14,11 @@
 - 合并分支，是否保留具体日志记录 `git merge --no-ff`
 - 如何绑定多个账号，多个 github、gitlab 等账户并存
 - 常见操作的逆操作都是什么，如何操作
+- git无法pull仓库refusing to merge unrelated histories(git 项目A，提交到 git 项目 B上，无法 pull)
+  - 如果合并了两个不同的开始提交的仓库，在新的 git 会发现这两个仓库可能不是同一个，为了防止开发者上传错误，于是就给下面的提示
+  - `fatal: refusing to merge unrelated histories`
+  - [解决方法](https://blog.csdn.net/lindexi_gd/article/details/52554159) 如下
+  - `git pull --allow-unrelated-histories`
 
 ## 文档
 
