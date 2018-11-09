@@ -3,6 +3,12 @@
 body
   overflow-y scroll
 
+// 设置代码段超出换行
+.content pre,
+.content pre[class*=language-]
+  word-break break-all
+  white-space pre-wrap
+
 div[class~="language-code"]:before
   content "code"
 

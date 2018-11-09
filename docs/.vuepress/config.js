@@ -159,7 +159,7 @@ function genSidebarConfig(lang) {
         title: t['topic'],
         collapsable: true,
         children: [
-          ['', '介绍'],
+          // ['', '介绍'],
           '',
           'growth/',
           'miniapp/',
