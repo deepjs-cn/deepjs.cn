@@ -72,3 +72,20 @@ Error: EACCES, mkdir '/usr/local/lib/node_modules/node-sass' - installing global
 解决方案（h5_blade项目）
 
 有说要清除npm cache，此处解决方案不明，在处理了npm cache 以及删除了~/.npm/_cacache 后，重新 npm i 好了（没有安装全局的node-sass），同时注意当前的 npm@5.6.0 和 nodejs@9.11.2 版本
+
+<!-- ### list
+
+org
+  - jskit
+  - cloudai
+  - appjs
+  - deepjs
+  - kitjs
+  - microjs
+  - scojs
+  - xmini
+  - xweb
+  - x-app
+  - x-mini
+  - kitdocs
+- js-cli -->
