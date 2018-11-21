@@ -23,7 +23,7 @@
         />
       </p>
     </div>
-    <div class="guide">请选择你需要的面试等级，从易到难分1-9级</div>
+    <!-- <div class="guide">请选择你需要的面试等级，从易到难分1-9级</div>
     <div class="filter">分类 难度 状态</div>
     <div class="questions">
       <ul class="question-list">
@@ -37,13 +37,15 @@
           </div>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import NavLink from '@parent-theme/components/NavLink.vue'
 
+// 参考 http://javascript-puzzlers.herokuapp.com/
+// https://github.com/sqrthree/javascript-puzzlers
 // 生成一份面试题，全屏界面，显示一题，可展开参考答案
 // 可以刷新，刷新为同类型题目
 // 两个按钮，上一题、下一题，星际评定后，直接下一题
