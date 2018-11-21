@@ -1,5 +1,7 @@
 # Vue
 
+相关项目
+
 - vue [https://cn.vuejs.org/v2/guide/]()
 - vue-router [https://router.vuejs.org/zh/]()
 - vuex [https://vuex.vuejs.org/zh/]()
@@ -9,3 +11,7 @@
 - vue-cli 3
 - vuepress
 - vue-issue-helper
+
+源码解析
+
+- [Vue2.2.6源码阅读201711](https://github.com/huang303513/SourceCodeResearchAndExploration/tree/master/Vue2.2.6%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB201711)

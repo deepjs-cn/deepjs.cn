@@ -64,7 +64,7 @@ npm publish
 npm unpublish xxx@x.x.x
 ```
 
-::: 提示
+::: tip 提示
 两小时内，发布的包可以撤销，之后就不能撤销了。
 :::
 

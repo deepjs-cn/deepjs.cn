@@ -1,38 +1,17 @@
 
-const locales = {
-  'zh': {
-    site: {
-      lang: 'zh-CN',
-      title: 'KitDocs.org',
-      description: '致力于提供一个好用的知识文档库',
-    },
-    news: '资讯',
-    topic: '知识库',
-    docs: '开发文档',
-    favorite: '收藏',
-    community: '社区',
-    tags: '标签',
-    neitui: '内推',
-    markdown: 'Markdown',
-    feature: 'feature',
-  },
-  // 'en': {
-  //   site: {
-  //     lang: 'en-US',
-  //     title: 'KitDocs.org',
-  //     description: 'Dedicated to Docs and its awesome community'
-  //   },
-  //   news: 'news',
-  //   topic: 'topic',
-  //   docs: 'docs',
-  //   community: 'community',
-  // },
-}
+const lang = 'zh'
+const locales = require('./locales')(lang);
+const genNav = require('./config/nav');
+const genSidebar = require('./config/sidebar');
 
 module.exports = {
   dest: 'dist',
   locales: {
-    '/': locales['zh'].site,
+    '/': {
+      lang: locales.lang,
+      title: locales.title,
+      description: locales.description,
+    },
     // '/en': locales['en'].site,
   },
   head: [
@@ -49,7 +28,7 @@ module.exports = {
   serviceWorker: {
     updatePopup: true // Boolean | Object, 默认值是 undefined.
   },
-  // theme: 'ads',
+  // theme: '',
   themeConfig: {
     sidebarDepth: 3,
     repo: 'kitdocs/kitdocs.org',
@@ -72,15 +51,13 @@ module.exports = {
             buttonText: "刷新"
           }
         },
-        nav: require('./nav/zh'),
+        nav: genNav(lang),
         // sidebar: {
         //   '/news/': getGuideSidebar('指南', '深入'),
         //   '/topic/': getPluginSidebar('插件', '介绍'),
         //   // '/theme/': getThemeSidebar('主题', '介绍'),
         // },
-        sidebar: {
-          ...genSidebarConfig('zh'),
-        },
+        sidebar: genSidebar(lang),
       },
     },
   },
@@ -142,86 +119,3 @@ module.exports = {
   },
 }
 
-function genSidebarConfig(lang) {
-  const t = locales[lang];
-  return {
-    '/news/': [
-      {
-        title: t['news'],
-        collapsable: true,
-        children: [
-          '',
-        ]
-      },
-    ],
-    '/topic/': [
-      {
-        title: t['topic'],
-        collapsable: true,
-        children: [
-          // ['', '介绍'],
-          '',
-          'growth/',
-          'miniapp/',
-          'git/',
-          'html/',
-          'css/',
-          'javascript/',
-          'nodejs/',
-          'ECMAScript/',
-          'vue/',
-          'algorithm/',
-          'benchmark/',
-          'performance/',
-          'markdown/',
-          // 'test/',
-          // 'vim/',
-          // 'nodejs/',
-          // 'rxjs/',
-          // 'linux/',
-          // 'browser/',
-          // 'http/',
-        ]
-      },
-    ],
-    '/docs/': [
-      {
-        title: t['docs'],
-        collapsable: true,
-        children: [
-          '',
-          // 'frontend',
-          // 'backend',
-          // 'database',
-        ]
-      },
-    ],
-    // '/tags/': [
-    //   {
-    //     title: t['tags'],
-    //     collapsable: true,
-    //     children: [
-    //       '',
-    //     ]
-    //   },
-    // ],
-    // '/tags',
-    '/favorite/': [
-      {
-        title: t['favorite'],
-        collapsable: true,
-        children: [
-          '',
-        ]
-      },
-    ],
-    // fallback
-    // '/': [
-    //   // ['', '首页'],        /* / */
-    //   '',        /* / */
-    //   'about',   /* /about.html */
-    //   'contact', /* /contact.html */
-    //   'weekly',  /* /weekly.html */
-    // ],
-  };
-}
