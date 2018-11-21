@@ -4,7 +4,7 @@ pageClass: page-interview
 heroImage: /interview.svg
 heroText: 30秒面试
 tagline: 精选面试题，助力你的下一次面试
-actionText: 开始 →
+actionText: 开始面试 →
 actionLink: /topic/
 ---
 
