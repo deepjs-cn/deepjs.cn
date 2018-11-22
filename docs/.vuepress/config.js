@@ -61,6 +61,7 @@ module.exports = {
     '@vuepress/plugin-back-to-top': true,
     '@vuepress/plugin-pwa': {
       serviceWorker: true,
+      // popupComponent: 'SWUpdatePopup',
       updatePopup: {
         '/': {
           message: "发现新内容可用",
@@ -70,6 +71,7 @@ module.exports = {
         //   message: "New content is available.",
         //   buttonText: "Refresh"
         // },
+      },
     },
     '@vuepress/plugin-medium-zoom': true,
     '@vuepress/plugin-notification': true,
