@@ -25,9 +25,9 @@ module.exports = {
     ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
-  serviceWorker: {
-    updatePopup: true // Boolean | Object, 默认值是 undefined.
-  },
+  // serviceWorker: {
+  //   updatePopup: true // Boolean | Object, 默认值是 undefined.
+  // },
   // theme: '',
   themeConfig: {
     sidebarDepth: 3,
@@ -45,12 +45,6 @@ module.exports = {
         selectText: '选择语言',
         editLinkText: '在 GitHub 上编辑此页',
         lastUpdated: '上次更新',
-        serviceWorker: {
-          updatePopup: {
-            message: "发现新内容可用",
-            buttonText: "刷新"
-          }
-        },
         nav: genNav(lang),
         // sidebar: {
         //   '/news/': getGuideSidebar('指南', '深入'),
@@ -67,7 +61,15 @@ module.exports = {
     '@vuepress/plugin-back-to-top': true,
     '@vuepress/plugin-pwa': {
       serviceWorker: true,
-      updatePopup: true
+      updatePopup: {
+        '/': {
+          message: "发现新内容可用",
+          buttonText: "刷新"
+        },
+        // '/en/': {
+        //   message: "New content is available.",
+        //   buttonText: "Refresh"
+        // },
     },
     '@vuepress/plugin-medium-zoom': true,
     '@vuepress/plugin-notification': true,
