@@ -19,7 +19,7 @@ module.exports = function genSidebarConfig(lang) {
         children: [
           // ['', '介绍'],
           '',
-          'growth/',
+          'do-you-know/',
           // 常用
           'vue/',
           'react/',
