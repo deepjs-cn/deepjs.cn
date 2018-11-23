@@ -42,6 +42,8 @@ module.exports = function genSidebarConfig(lang) {
           // 常识辅助
           'hybrid/',
           'markdown/',
+          'awesome/',
+          'image/',
           'version/',
           // 'test/',
           // 'vim/',
