@@ -2,7 +2,8 @@
 
 参照[JavaScript 算法与数据结构](https://github.com/trekhleb/javascript-algorithms)，结合自己的理解，操作一遍各类目
 
-- [中文版](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
+- [JavaScript 算法与数据结构 - 中文版](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
+- https://github.com/imhuay/Algorithm_Interview_Notes-Chinese
 
 ## 数据结构
 

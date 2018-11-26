@@ -1,3 +1,15 @@
+---
+tags: (separate each by a comma)
+
+expertise: (0,1,2)
+---
+
+<!-- Expertise levels:
+  0: 简单 easy
+  1: 中等 medium
+  2: 困难 hard
+-->
+
 ### Your question goes here. Keep it straightforward.
 
 <!-- If you need to display some code, keep it short. It goes here: -->
@@ -32,15 +44,4 @@
 
 ##### Additional links
 
-<!-- Whenever possible, link a more detailed explanation. -->
-
-* [Short title](https://yourLinkGoes.here/)
-
-<!-- tags: (separate each by a comma) -->
-
-<!-- expertise: (0,1,2) -->
-<!-- Expertise levels:
-	0: easy
-	1: intermediate
-	2: hard
--->
+- [Short title](https://yourLinkGoes.here/)

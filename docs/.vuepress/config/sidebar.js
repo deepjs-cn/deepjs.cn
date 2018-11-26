@@ -13,63 +13,46 @@ module.exports = function genSidebarConfig(lang) {
       },
     ],
     '/topic/': [
-      // 前端
-      // {
-      //   title: t['frontend'],
-      //   collapsable: true,
-      //   children: [
-      //     'vue/',
-      //     // 'react/'
-      //   ],
-      // },
-      // // 后端
-      // {
-      //   title: t['backend'],
-      //   collapsable: true,
-      //   children: [
-      //     // 'react/'
-      //   ],
-      // },
+      // 不做前端后端这样的工种分类，应按知识点去分类
+      // 如 html css 网络相关 性能相关 Web 安全 数据库 数据结构与算法 等，这样感兴趣就可以展开去阅读
       {
         title: t['topic'],
-        collapsable: true,
+        collapsable: false,
         children: [
           // ['', '介绍'],
           '',
           'do-you-know/',
-          // 常用
-          'vue/',
-          'react/',
-          'git/',
-          'npm/',
-          'vim/',
-          'nginx/',
-          'nodejs/',
-          'database/',
-          // 性能优化及分析
-          'benchmark/',
-          'performance/',
           // 基础
           'html/',
           'css/',
           'javascript/',
           'miniapp/',
-          // 'ECMAScript/',
-          'algorithm/',
-          // 常识辅助
-          'hybrid/',
+          'git/',
+          'npm/',
+          'vim/',
           'markdown/',
-          'awesome/',
-          'image/',
           'version/',
-          // 'test/',
-          // 'vim/',
-          // 'nodejs/',
-          // 'rxjs/',
-          // 'linux/',
-          // 'browser/',
-          // 'http/',
-        ]
+          'linux/',
+          'browser/',
+          'http/',
+          // 前端
+          'vue/',
+          'react/',
+          'rxjs/',
+          // 'preact.html'
+          'hybrid/',
+          // 性能优化及分析
+          'benchmark/',
+          'performance/',
+          'nodejs/',
+          // 后端
+          'nginx/',
+          'database/',
+          // 其他
+          'image/',
+          'awesome/',
+          'algorithm/',
+        ],
       },
     ],
     '/docs/': [
@@ -81,7 +64,7 @@ module.exports = function genSidebarConfig(lang) {
           // 'frontend',
           // 'backend',
           // 'database',
-        ]
+        ],
       },
     ],
     // '/tags/': [
