@@ -13,6 +13,23 @@ module.exports = function genSidebarConfig(lang) {
       },
     ],
     '/topic/': [
+      // 前端
+      // {
+      //   title: t['frontend'],
+      //   collapsable: true,
+      //   children: [
+      //     'vue/',
+      //     // 'react/'
+      //   ],
+      // },
+      // // 后端
+      // {
+      //   title: t['backend'],
+      //   collapsable: true,
+      //   children: [
+      //     // 'react/'
+      //   ],
+      // },
       {
         title: t['topic'],
         collapsable: true,

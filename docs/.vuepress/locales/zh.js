@@ -23,4 +23,5 @@ module.exports = {
   changelog: 'Changelog',
   markdown: 'Markdown',
   feature: 'feature',
+  frontend: '前端',
 };

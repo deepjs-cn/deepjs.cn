@@ -16,6 +16,11 @@
   - 契约优先（contract first） MockServer
 - TDD 测试驱动开发
 
+- https://github.com/yangshun/tech-interview-handbook
+- https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/README.md
+- https://github.com/h5bp/Front-end-Developer-Interview-Questions
+- https://github.com/yangshun/tech-interview-handbook/blob/master/preparing/cheatsheet.md
+
 <!-- list:
 - title: HTML
   logo: icons/html.svg

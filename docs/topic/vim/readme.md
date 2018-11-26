@@ -5,6 +5,7 @@
 - [Learning VIM while playing a game](https://vim-adventures.com/)
 - [openvim 简单教程](https://www.openvim.com/)
 - [Linux vi/vim](http://www.runoob.com/linux/linux-vim.html)
+- [How To Learn Vim: A Four Week Plan](https://medium.com/actualize-network/how-to-learn-vim-a-four-week-plan-cd8b376a9b85) - `vimtutor`
 
 Vim 的学习曲线非常陡，一开始学习的时候，要记住很多的操作命令，这常常让人望而却步。
 
