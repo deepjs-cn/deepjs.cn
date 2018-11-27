@@ -18,8 +18,12 @@
   - yarn
     - `yarn global add xxx`
     - Yarn 升级 `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
-  - n 管理 nodejs 版本 `n list`
-  - nrm 管理npm源（或镜像源）`nrm list`
+  - n 管理 nodejs 版本
+    - `sudo n list`
+    - `sudo n use x.x.x`
+  - nrm 管理npm源（或镜像源）
+    - `nrm ls`
+    - `nrm use taobao`
   - npx 一个npm包执行器
     - 临时安装可执行依赖包，不用全局安装，不用担心长期的污染。
     - 可以执行依赖包中的命令，安装完成自动运行
