@@ -21,5 +21,9 @@
   - Go2Shell默认没有设置界面，需要用命令行打开(隐藏的真深) `open -a Go2Shell --args config`
   <!-- ![go2shell-config](../img/go2shell-config.png) -->
 - 代理工具 [charles](https://www.charlesproxy.com/)
+- [launchctl](https://www.jianshu.com/p/b65c1d339eec) 是一个统一的服务管理框架，启动、停止和管理守护进程、应用程序、进程和脚本。
 
-在 MacOSX 下可以用 launchctl 来管理这些服务(开机启动)。
+## 其他
+
+- Mac 系统自带了开机启动项管理工具
+  - 系统偏好设置 -> 用户与群组 -> 登陆项
