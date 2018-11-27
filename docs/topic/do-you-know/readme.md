@@ -8,3 +8,6 @@
 - [关于增加md5戳以后文件越来越多](https://github.com/fex-team/fis/issues/97)
 - [WiFi流量劫持—— JS脚本缓存投毒](https://www.cnblogs.com/index-html/p/wifi_hijack_3.html)
 - https://github.com/sofish/idiomatic.js/blob/master/translations/zh_CN/readme.md
+- https://github.com/ymfe/yapi
+  - YApi 是一个可本地部署的、打通前后端及QA的、可视化的接口管理平台
+  - 强力推荐 YApi 甚至可以和swagger配合自定义工作流

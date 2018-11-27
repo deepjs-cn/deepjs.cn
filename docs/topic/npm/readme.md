@@ -14,6 +14,7 @@
   - npm
     - `npm list -g --depth=0`
     - `npm i -g xxx`
+    - 安装最新版 `npm i npm@latest -g`
   - yarn
     - `yarn global add xxx`
     - Yarn 升级 `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`

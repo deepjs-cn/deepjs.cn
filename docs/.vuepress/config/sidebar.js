@@ -32,6 +32,8 @@ module.exports = function genSidebarConfig(lang) {
           'vim/',
           'markdown/',
           'version/',
+          // 'windows/',
+          'mac/',
           'linux/',
           'browser/',
           'http/',

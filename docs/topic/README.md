@@ -23,29 +23,9 @@
 
 要有一台好的电脑，推荐 Mac，Mac 系统自带了 gcc, g++, ruby, python的环境，此外还需要安装 nodejs, git等
 
+Mac 参考 [Mac 开发环境配置](./mac/readme.md)
+
 - [chrome](https://www.google.com/chrome/)
-- [brew](https://brew.sh/) - [homebrew](https://github.com/Homebrew/homebrew) 是mac下类似apt-get的软件管理工具
-  - 我们需要将 `/usr/local/bin` 添加到PATH路径的最前面，保证系统优先调用到的是brew下载的
-  - 在命名行下输入 `:echo export PATH='/usr/local/bin:$PATH' >> ~/.bash_profile`
-  - 也可以执行`brew doctor 来检测
-- [zsh](https://ohmyz.sh/) 参考介绍[终极 Shell](https://zhuanlan.zhihu.com/p/19556676)
-  - 安装 `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-  - 替换bash的方式 `chsh -s /bin/zsh`, 重启终端或执行 `source ~/.zshrc` 启用配置
-  - 设置默认 shell `usermod -s /bin/zsh`
-  - 查看当前 shell `echo $SHELL`
-  - 配置实现自动跳转的插件
-    - [z](https://github.com/rupa/z)
-      - 无需安装，配置修改 `~/.zshrc`中 `plugins=(git z)` 即可
-    - [autojump](https://github.com/joelthelion/autojump)
-      - 安装 `brew install autojump`
-      - 配置 `plugins=(git autojump)`
-    - [fasd](https://github.com/clvv/fasd) 功能上和z, autojump差不多，功能和速度上更优
-      - 安装 `brew install fasd`, 之后执行 `eval "$(fasd --init auto)"`
-      - 配置 `plugins=(git fasd)`
-- [iTerm2](https://iterm2.com/) 终端利器替代 terminal
-- Finder 搭配上 [`Go2Shell`](https://zipzapmac.com/Go2Shell) 插件，可以在目录中直接打开终端，且可指定终端为iTerm2。
-  - Go2Shell默认没有设置界面，需要用命令行打开(隐藏的真深) `open -a Go2Shell --args config`
-  <!-- ![go2shell-config](../img/go2shell-config.png) -->
 - [git](https://git-scm.com/) 图形化工具-[sourceTree](https://www.sourcetreeapp.com/)
   - 开发项目，填写有效的commit 信息
   - 提交代码，需要经过 codereview 代码审核
@@ -73,7 +53,6 @@
   - n 管理 nodejs 版本 `n list`
   - nrm 管理npm源（或镜像源）`nrm list`
   - http-server 使用 nodejs随时开启一个 http 服务
-- 代理工具 [charles](https://www.charlesproxy.com/)
 - [1Passward](https://itunes.apple.com/cn/app/1password-password-manager/id568903335?mt=8) Password Manager [完全指南](https://sspai.com/post/26877)
 
 ## 常用文档
