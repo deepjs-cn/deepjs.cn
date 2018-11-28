@@ -26,5 +26,5 @@ module.exports = {
   basics: '基础',
   frontend: '前端',
   backend: '后端',
-  other: '其他',
+  todo: 'Todo',
 };

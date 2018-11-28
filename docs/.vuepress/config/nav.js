@@ -34,6 +34,11 @@ module.exports = function genNavConfig(lang) {
       text: t['interview'],
       link: '/interview/'
     },
+    // todo 放在资讯的右侧主内容区域
+    // {
+    //   text: t['todo'],
+    //   link: '/todo/'
+    // },
     // {
     //   text: t['community'],
     //   link: '/community/'
