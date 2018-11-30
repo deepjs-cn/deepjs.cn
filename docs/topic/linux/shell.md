@@ -43,3 +43,7 @@ alias ipi='ipconfig getifaddr en0'
 # 清空屏幕
 alias c='clear'
 ```
+
+## 常用命令
+
+- `less access.log.2018112910 | grep 'hsq-coupon-aliapp' > err.log`

@@ -10,41 +10,41 @@
 
 ## 常用工具配置
 
-- npm 全局工具
-  - npm
-    - `npm list -g --depth=0`
-    - `npm i -g xxx`
-    - `npm uninstall -g xxx`
-    - 安装最新版 `npm i npm@latest -g`
-  - yarn
-    - `yarn global add xxx`
-    - Yarn 升级 `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
-  - n 管理 nodejs 版本
-    - `sudo n list`
-    - `sudo n use x.x.x`
-  - nrm 管理npm源（或镜像源）
-    - `nrm ls`
-    - `nrm use taobao`
-  - npx 一个npm包执行器
-    - 临时安装可执行依赖包，不用全局安装，不用担心长期的污染。
-    - 可以执行依赖包中的命令，安装完成自动运行
-  - 基于 nodejs 启动一个本地 http 服务
-    - http-server `hs dist -p 8090 -o`
-    - serve `serve dist -l 3040`
-  - npm-check 检查依赖库版本
-    - `npm-check -ug`
-  - gh-pages 发布文件到 github 任意分支
-    - 发布 dist 目录到 gh-pages 分支，附带message `${branchName}-${commitId}`
-    - `gh-pages -d dist --message $(git symbolic-ref --short -q HEAD)-$(git rev-parse --short HEAD)`
-    - 可选参数
-      - 发布到远程 `-r git@github.com:jskit/kit-admin.git`
-      - 发布到分支 `-b newBranch`
-  - jsnice 反混淆 js
-  - pm2
-  - eslint
-  - babel-cli
-  - @vue/cli 初始化 vue 项目
-  - sinopia
+- npm
+  - `npm list -g --depth=0`
+  - `npm i -g xxx`
+  - `npm uninstall -g xxx`
+  - 安装最新版 `npm i npm@latest -g`
+- yarn
+  - `yarn global add xxx`
+  - Yarn 升级 `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
+- n 管理 nodejs 版本
+  - `sudo n list`
+  - `sudo n use x.x.x`
+- nrm 管理npm源（或镜像源）
+  - `nrm ls`
+  - `nrm use taobao`
+- npx 一个npm包执行器
+  - 临时安装可执行依赖包，不用全局安装，不用担心长期的污染。
+  - 可以执行依赖包中的命令，安装完成自动运行
+- 基于 nodejs 启动一个本地 http 服务
+  - http-server `hs dist -p 8090 -o`
+  - serve `serve dist -l 3040`
+- npm-check 检查依赖库版本
+  - `npm-check -ug`
+- gh-pages 发布文件到 github 任意分支
+  - 发布 dist 目录到 gh-pages 分支，附带message `${branchName}-${commitId}`
+  - `gh-pages -d dist --message $(git symbolic-ref --short -q HEAD)-$(git rev-parse --short HEAD)`
+  - 可选参数
+    - 发布到远程 `-r git@github.com:jskit/kit-admin.git`
+    - 发布到分支 `-b newBranch`
+- jsnice 反混淆 js
+- pm2
+- eslint
+- babel-cli
+- @vue/cli 初始化 vue 项目
+- sinopia
+- [lerna](https://lernajs.io/) 是一个优化使用git和npm管理多包存储库的工作流程的工具。
 
 ## npm 包发布流程
 
@@ -115,9 +115,25 @@ npm unpublish xxx@x.x.x
 
 ## FAQ
 
-h5_blade 老项目运行不起来，可能的原因
+这里收集一些遇到的 npm 问题
 
-- `sudo npm i -g node-sass`
+**升级npm 遇到错误**
+
+`sudo npm i -g npm` 全局升级遇到错误
+
+```bash
+npm ERR! Unexpected end of input at 1:574411
+npm ERR! 3.4","init-package-json":"~1.9.3","lockfile":"~1.0.1","lru-cache":"~4
+npm ERR!
+```
+
+使用一下方法处理下缓存，之后再重新执行安装即可
+
+`sudo npm cache verify -g`
+
+**h5_blade 老项目运行不起来，可能的原因**
+
+`sudo npm i -g node-sass` 报以下错误
 
 Error: EACCES, mkdir '/usr/local/lib/node_modules/node-sass' - installing globally
 
@@ -142,17 +158,17 @@ npm i
 <!-- ### list
 
 org
-  - jskit
+  - jskit √
   - cloudai
   - appjs
-  - deepjs
+  - deepjs √
   - kitjs
   - microjs
-  - scojs
-  - xmini
+  - socjs
+  - xmini √
   - xweb
   - x-app
   - x-mini
-  - kitdocs
-  - xdocs
-- js-cli -->
+  - kitdocs √
+  - xdocs √
+- js-cli √ -->

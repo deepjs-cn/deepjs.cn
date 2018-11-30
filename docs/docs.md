@@ -28,3 +28,5 @@
 - [Mac升级10.12.5后不能翻墙了](https://github.com/shadowsocks/ShadowsocksX-NG/issues/371)
   - https://shadowsocks.org/en/download/clients.html
   - 解决办法，安装电脑管家，把 ShadowsocksX-NG 卸载干净，重新安装
+
+- design pattern library https://www.google.com.hk/search?q=design+pattern+library&gws_rd=cr
