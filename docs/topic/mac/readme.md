@@ -1,6 +1,6 @@
 # Mac 开发环境配置
 
-## 常用软件配置
+## 常用配置
 
 - [brew](https://brew.sh/) - [homebrew](https://github.com/Homebrew/homebrew) 是mac下类似apt-get的软件管理工具
   - 参考 [brew 配置](./brew.html)

@@ -117,6 +117,16 @@ npm unpublish xxx@x.x.x
 
 这里收集一些遇到的 npm 问题
 
+- [npm 和 yarn 缓存策略对比](https://segmentfault.com/a/1190000009709213)
+  - npm
+    - npm cache add 主要是 npm 内部使用
+    - npm cache clean 删除缓存目录下的所有数据。从 npm@5 开始，为了保证缓存数据的有效性和完整性，需要加上 --force 参数
+    - npm cache verify 验证缓存数据的有效性和完整性，清理垃圾数据
+  - yarn
+    - yarn cache ls 列出当前缓存的包列表
+    - yarn cache dir 显示缓存数据的目录
+    - yarn cache clean 清除所有缓存数据
+
 **升级npm 遇到错误**
 
 `sudo npm i -g npm` 全局升级遇到错误
@@ -139,15 +149,16 @@ Error: EACCES, mkdir '/usr/local/lib/node_modules/node-sass' - installing global
 
 解决方案（h5_blade项目）
 
-有说要清除cache，此处解决方案不明，在处理了npm cache 以及删除了~/.npm/_cacache 后，重新 npm i 好了，同时注意当前的 npm@5.6.0 和 nodejs@9.11.2 版本
+有说要清除cache，此处解决方案不明，在使用 `npm cache clean --force` 删除了 ~/.npm/_cacache 后，重新 npm i 好了，同时注意当前的 npm@5.6.0 和 nodejs@9.11.2 版本
 
 以下为解决办法步骤（**不需要**安装全局的node-sass）
 
 ```bash
-# 清除缓存
 npm cache verify
 
-rm -rf ~/.npm/_cacache
+# [清除缓存](https://docs.npmjs.com/cli/cache)
+# rm -rf ~/.npm/_cacache
+npm cache clean --force
 
 # 删除当前项目下的 node_modules
 rm -rf node_modules
