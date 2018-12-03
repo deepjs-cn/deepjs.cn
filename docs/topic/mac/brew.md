@@ -17,7 +17,7 @@
 来试试用 Coding 家的 Homebrew 源吧！( 该源每 5 分钟和上游同步一次，依托 Coding 遍布全国的 Git 服务节点（在 http://Coding.net push & pull 仓库代码的速度也是同样的快），让你的 brew update 更快！）
 
 ```bash
-cd "$(brew --repo)" && git remote set-url origin https://git.coding.net/homebrew/homebrew.git`
+cd "$(brew --repo)" && git remote set-url origin https://git.coding.net/homebrew/homebrew.git
 cd $home && brew update
 ```
 

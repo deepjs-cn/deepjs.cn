@@ -166,6 +166,17 @@ sudo npm i -g node-gyp node-pre-gyp
 npm i
 ```
 
+报错 Install failed with Node v.10 due to upath@1.0.4 incompatibility
+
+```bash
+error upath@1.0.4: The engine "node" is incompatible with this module. Expected version ">=4 <=9". Got "10.14.1"
+error Found incompatible module
+```
+
+解决方案
+
+Instead, the proper solution is to delete `node_modules/`, `package-lock.json` & `yarn.lock` and run `yarn` install or `npm i` again.
+
 <!-- ### list
 
 org

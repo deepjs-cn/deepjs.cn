@@ -1,9 +1,36 @@
 # cli 工具
 
-启发：如何用 node 开发自己的 cli 工具
+平时用一些 http-server vue-cli create-react-app 等工具时，感觉特别爽，也想自己搞一下，来实现自己的需求
 
-- 用来帮助完成项目初始化
+## 需求
+
+- 想集成打包自己想要的一些功能
+  - 微信小程序图片上传到远程
+  - 上传图片到七牛
+- 想定制自动完成初始化项目或页面
+
+### 示例
+
+一条命令就可以把当前目录或者特定目录中的图片上传到图片服务器
+
+- 支持 md5
+- 支持 递归扫描
+- 支持配置上传 cdn
+
+#### 用到的 npm 包
+
+涉及到命令，就避不开要能正确获得命令的名字，参数和选项这些内容，如果这些都是自己处理，是相当麻烦。幸好，有些大神已经处理好这些内容，我们只需用就可以了。
+
+- commander （必选，统一处理命令，参数和选项）
+- colors （可选，输出带颜色的 console）
+
+#### 添加 bin 目录
+
+
+
+#### 本地开发及测试
 
 参考：
 
-- https://github.com/pkwenda/blog/issues/7
+- [如何用node开发自己的cli工具](https://github.com/pkwenda/blog/issues/7)
+- [从零开始编写 Node 命令行程序](https://blog.ymfe.org/command-line-with-node/)
