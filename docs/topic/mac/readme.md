@@ -19,7 +19,7 @@
       - 安装 `brew install fasd`, 之后执行 `eval "$(fasd --init auto)"`
       - 配置 `plugins=(git fasd)`
 - [iTerm2](https://iterm2.com/) 终端利器替代 terminal
-  - iTerm2 最好用的是分屏CMD+D/CMD+Shift+D
+  - iTerm2 最好用的是分屏 `CMD+D`/`CMD+Shift+D`
 - [tmux](https://www.cnblogs.com/kaiye/p/6275207.html) 终端复用
 - Finder 搭配上 [`Go2Shell`](https://zipzapmac.com/Go2Shell) 插件，可以在目录中直接打开终端，且可指定终端为iTerm2。
   - Go2Shell默认没有设置界面，需要用命令行打开(隐藏的真深)
@@ -45,4 +45,3 @@
 
 - [十分钟学会 tmux](https://www.cnblogs.com/kaiye/p/6275207.html)
 - [优雅地使用命令行：Tmux 终端复用](https://harttle.land/2015/11/06/tmux-startup.html)
-- [三十分钟学会AWK](https://github.com/mylxsw/growing-up/blob/master/doc/%E4%B8%89%E5%8D%81%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AAWK.md)
