@@ -296,10 +296,37 @@ npm run changelog
 
 ## 环境配置
 
-配置好开发环境，使用时就如行云流水。
+配置好开发环境，使用时就如行云流水
+
+你可以在 `pre-commit` 里面添加其他的脚本，比如单元测试(`ava`, `mocha`, `jasmine`...） 或者覆盖度测试(`nyc`, `istanbul`...)。 当然，在 `pre-commit` 的钩子里面添加的脚本越多，你的代码等待 `commit` 的时间也就越长。
+
+安装依赖
+
+```bash
+sudo npm install -g commitizen cz-conventional-changelog
+```
+
+配置
+
+```bash
+echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+```
+
+或 package.json 中添加 `config.commitizen`
+
+``` js
+"config": {
+  "commitizen": {
+    "path": "cz-conventional-changelog"
+  }
+}
+```
+
+其他配置 package.json
 
 ```js
 "scripts": {
+  "commit": "npx git-cz",
   "changelog": "node scripts/genChangelog.js run"
 },
 "gitHooks": {
