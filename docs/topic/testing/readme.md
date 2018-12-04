@@ -1,5 +1,10 @@
 # 自动化测试
 
+测试框架：
+
+- mocha
+- jest
+
 - [前端自动化测试探索](http://fex.baidu.com/blog/2015/07/front-end-test/)
 - [虚拟座谈会：代码测试比率、测试驱动开发及行为驱动开发](http://www.infoq.com/cn/articles/virtual-panel-tdd-bdd)
 - [TDD 与 BDD 仅仅是语言描述上的区别么？](https://www.zhihu.com/question/20161970)

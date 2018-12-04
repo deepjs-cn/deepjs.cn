@@ -20,6 +20,10 @@
   - [解决方法](https://blog.csdn.net/lindexi_gd/article/details/52554159) 如下
   - `git pull --allow-unrelated-histories`
 
+### 高级用法
+
+- [Commit message 和 Change log 编写指南](./commit-message.html)
+
 ## 文档
 
 Pro Git 2

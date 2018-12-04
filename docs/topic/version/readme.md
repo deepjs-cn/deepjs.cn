@@ -1,5 +1,9 @@
 # 语义化版本
 
+版本管理
+
+- [lerna](https://lernajs.io/)
+
 参考
 
 - [语义化版本 2.0.0](https://semver.org/lang/zh-CN/)
