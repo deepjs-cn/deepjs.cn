@@ -31,5 +31,8 @@
 
 - design pattern library https://www.google.com.hk/search?q=design+pattern+library&gws_rd=cr
 
+- http://www.ruanyifeng.com/blog/2018/11/page_lifecycle_api.html
+- http://www.ruanyifeng.com/blog/2018/10/page_visibility_api.html
+
 
 - [三十分钟学会AWK](https://github.com/mylxsw/growing-up/blob/master/doc/%E4%B8%89%E5%8D%81%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AAWK.md)

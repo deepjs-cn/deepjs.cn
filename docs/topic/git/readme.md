@@ -20,9 +20,10 @@
   - [解决方法](https://blog.csdn.net/lindexi_gd/article/details/52554159) 如下
   - `git pull --allow-unrelated-histories`
 
-### 高级用法
+### 知识扩展
 
 - [Commit message 和 Change log 编写指南](./commit-message.html)
+- [Git 原理入门](https://www.ruanyifeng.com/blog/2018/10/git-internals.html)
 
 ## 文档
 
