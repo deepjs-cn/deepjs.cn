@@ -94,7 +94,7 @@ Header部分只有一行，包括三个字段：`type`（必需）、`scope`（�
 
 ##### （1）type
 
-`type` 用于说明 commit 的类别，**只允许**使用下面7个标识。
+`type` 用于说明 commit 的类别，**只允许**使用下面列出来的标识。
 
 - build: 影响系统构建或外部依赖的修改(如: gulp, broccoli, npm)
 - ci: 对CI配置文件和脚本的更改(如: Travis, Circle, BrowserStack, SauceLabs)

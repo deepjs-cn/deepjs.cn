@@ -23,6 +23,42 @@
 - 页面间通信
 - 统计方案
 - 错误上报
+- 小程序使用 iconfont
+
+## 使用 iconfont
+
+- web开发中使用字体图标有很多好处，比如：矢量（无论如何缩放都保持高清）、体积小等等
+- 小程序开发与平时web开发类似，也可以使用字体图标
+- 方案：
+  - src:url()无论本地还是远程地址都不行**？
+  - 转成 base64值则都是可以显示的
+    - 很多网友推荐将字体图标转化成base64？。虽然这也不乏是一种解决方案，但是，很麻烦。特别是在项目初期，不确定需要用哪些图标的时候，加一个图标转一次，特别心累。
+  - 通过 iconfont.css 方式
+
+### 1 通过 iconfont.css 方式
+
+- iconfont 选用 `font class` 生成
+- 在全局样式 app.wxss中, 第一行加入代码
+  - `@import "/style/iconfont";` 注意后缀名改为 `.wxss`
+
+::: warning 注意
+通过加入iconfont.css方式，可以使用单色的iconfont字体，不能使用彩色的
+:::
+
+### 2 通过转成 base64 方式
+
+小程序的wxss文件font-face的src:url()无论本地还是远程地址都不行，但可以**接受base64**
+
+- 先到字体图标库下载字体图标，找到ttf文件
+- 将ttf文件转换成base64
+  - 打开这个平台 [transfonter.org](https://transfonter.org/)
+  - 点击Add fonts按钮,加载ttf格式的那个文件
+  - 将下边的base64 encode改为on
+  - 点击Convert按钮 进行转换后 点击download下载
+- 新建font.wxss文件，并在app.wxss引用font.wxss
+  - 复制下载的压缩文件中的stylesheet.css的内容到font.wxss,并且将icomoon中的style.css除了@font-face所有的代码也复制到font.wxss并将i选择器换成.iconfont
+- 最后就可以在wxml中使用字体了
+  - `<text class="iconfont icon-home" style="font-size:50px;color:red"></text>`
 
 ## 注意事项
 
