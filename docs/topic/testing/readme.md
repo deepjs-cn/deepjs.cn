@@ -4,12 +4,15 @@
 
 - mocha
 - jest
+- [power-assert](https://github.com/power-assert-js/power-assert)
 
 - [前端自动化测试探索](http://fex.baidu.com/blog/2015/07/front-end-test/)
 - [虚拟座谈会：代码测试比率、测试驱动开发及行为驱动开发](http://www.infoq.com/cn/articles/virtual-panel-tdd-bdd)
 - [TDD 与 BDD 仅仅是语言描述上的区别么？](https://www.zhihu.com/question/20161970)
 - [关于TDD、BDD和DDD的一些看法](http://www.cnblogs.com/ustbwuyi/archive/2012/10/26/2741223.html)
 - http://cuketest.com/zh-cn/
+- [No API is the best API - 抛弃 should/expect/chai 吧](https://github.com/atian25/blog/issues/16)
+- [单元测试](https://eggjs.org/zh-cn/core/unittest.html)
 
 ## 为什么需要自动化测试?
 

@@ -1,6 +1,12 @@
 # NPM
 
 - [官方 npm 文档](https://docs.npmjs.com/getting-started/what-is-npm)
+- [阮一峰-npm模块管理器](http://javascript.ruanyifeng.com/nodejs/npm.html)
+- [调试技巧 - npm link](https://github.com/atian25/blog/issues/17)
+- [Understanding npm-link](https://medium.com/dailyjs/how-to-use-npm-link-7375b6219557) 翻墙
+- [如何挑选高质量的 Node.js 模块](https://github.com/atian25/blog/issues/19)
+  - [node-modules](https://github.com/node-modules) 是国内很多 Node.js 大神维护的 Group，里面的模块都经受住大规模的应用考虑，标准化和质量都不错
+- [为什么我不使用 shrinkwrap（lock）](https://zhuanlan.zhihu.com/p/22934066)
 
 ## 常见问题
 

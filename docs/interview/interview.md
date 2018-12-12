@@ -1,0 +1,32 @@
+# 面试
+
+- 布局
+  - 两列布局
+  - css3 动画
+  - 禁止滚动
+- JS
+  - 添加原生事件监听
+  - 动态子元素事件监听
+  - call apply 与 bind
+- vue
+  - 生命周期 10个
+  - 发 ajax 请求在哪个区间
+  - 响应式如何实现的
+  - 组件间通信
+  - 封装过哪些组件，举例
+  - 页面滚动加载
+  - 如何实现一个两列的瀑布流
+- http 以及缓存
+  - Cache-Control 可以设置哪几个值
+    - public
+    - private
+    - no-cache/no-store
+    - must-revalidation/proxy-revalidation
+    - max-age=xxx (xxx is numeric)
+  - http2
+- webpack
+  -
+- 算法
+  - 去重
+  -
+- event loop 任务队列
