@@ -1,10 +1,12 @@
+const path = require('path')
+const container = require('markdown-it-container')
 
-const lang = 'zh'
+const lang = 'zh-CN'
 const locales = require('./locales')(lang);
 const genNav = require('./config/nav');
 const genSidebar = require('./config/sidebar');
 
-module.exports = {
+module.exports = ctx => ({
   dest: 'dist',
   locales: {
     '/': {
@@ -25,9 +27,6 @@ module.exports = {
     ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
-  // serviceWorker: {
-  //   updatePopup: true // Boolean | Object, 默认值是 undefined.
-  // },
   // theme: '',
   themeConfig: {
     sidebarDepth: 3,
@@ -35,10 +34,10 @@ module.exports = {
     editLinks: true,
     docsDir: 'docs',
     // #697 Provided by the official algolia team.
-    algolia: {
+    algolia: ctx.isProd ? ({
       apiKey: 'e6bcd0241fa598b7462a1b6c542e979b',
       indexName: 'kitdocs.org',
-    },
+    }) : null,
     locales: {
       '/': {
         label: '简体中文',
@@ -55,28 +54,56 @@ module.exports = {
       },
     },
   },
-  // yarn add @vuepress/plugin-i18n-ui @vuepress/plugin-back-to-top @vuepress/plugin-pwa @vuepress/plugin-medium-zoom @vuepress/plugin-notification flowchart --dev
-  plugins: {
-    // '@vuepress/plugin-i18n-ui': true,
-    '@vuepress/plugin-back-to-top': true,
-    '@vuepress/plugin-pwa': {
+  // 自带4个
+    // @vuepress/plugin-active-header-links @vuepress/plugin-last-updated @vuepress/plugin-register-components @vuepress/plugin-search
+    // yarn add @vuepress/plugin-medium-zoom@next @vuepress/plugin-notification@next @vuepress/plugin-pwa@next @vuepress/plugin-i18n-ui@next @vuepress/plugin-pagination@next @vuepress/plugin-google-analytics@next @vuepress/plugin-back-to-top@next --dev
+  plugins: [
+    // ['@vuepress/i18n-ui', !ctx.isProd],
+    ['@vuepress/back-to-top', true],
+    ['@vuepress/pwa', {
       serviceWorker: true,
-      // popupComponent: 'SWUpdatePopup',
+      // updatePopup: true,
       updatePopup: {
         '/': {
           message: "发现新内容可用",
           buttonText: "刷新"
         },
-        // '/en/': {
-        //   message: "New content is available.",
-        //   buttonText: "Refresh"
-        // },
       },
-    },
-    '@vuepress/plugin-medium-zoom': true,
-    '@vuepress/plugin-notification': true,
-    'flowchart': true
-  },
+    }],
+    ['@vuepress/medium-zoom', true],
+    ['@vuepress/notification', true],
+    ['@vuepress/google-analytics', {
+      ga: ''
+    }],
+    ['@vuepress/pagination', true],
+    // {
+    //   postsFilter: ({ type }) => type === 'post',
+    //   postsSorter: (prev, next) => {
+    //     const prevTime = new Date(prev.frontmatter.date).getTime()
+    //     const nextTime = new Date(next.frontmatter.date).getTime()
+    //     return prevTime - nextTime > 0 ? -1 : 1
+    //   },
+    // }],
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          // 不要忘了安装 moment
+          const moment = require('moment')
+          moment.locale(lang)
+          return moment(timestamp).fromNow()
+        }
+      }
+    ],
+    // clientRootMixin: path.resolve(__dirname, 'mixin.js'),
+    // extendMarkdown (md) {
+    //   md.use(container, 'upgrade', {
+    //     render: (tokens, idx) => tokens[idx].nesting === 1
+    //       ? `<UpgradePath title="${tokens[idx].info.trim().slice('upgrade'.length).trim()}">`
+    //       : '</UpgradePath>'
+    //   })
+    // },
+  ],
   // clientRootMixin: path.resolve(__dirname, 'mixin.js')
   chainWebpack: (config, isServer) => {
     if (!isServer) {
@@ -121,5 +148,5 @@ module.exports = {
       // md.use(require('@iktakahiro/markdown-it-katex'))
     }
   },
-}
+});
 
