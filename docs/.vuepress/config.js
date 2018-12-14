@@ -84,17 +84,18 @@ module.exports = ctx => ({
         return prevTime - nextTime > 0 ? -1 : 1
       },
     }],
-    [
-      '@vuepress/last-updated',
-      {
-        transformer: (timestamp, lang) => {
-          // 不要忘了安装 moment
-          const moment = require('moment')
-          moment.locale(lang)
-          return moment(timestamp).fromNow()
-        }
-      }
-    ],
+    ['@vuepress/last-updated', true],
+    // [
+    //   '@vuepress/last-updated',
+    //   {
+    //     transformer: (timestamp, lang) => {
+    //       // 不要忘了安装 moment
+    //       const moment = require('moment')
+    //       moment.locale(lang)
+    //       return moment(timestamp).fromNow()
+    //     }
+    //   }
+    // ],
     // clientRootMixin: path.resolve(__dirname, 'mixin.js'),
     // extendMarkdown (md) {
     //   md.use(container, 'upgrade', {
