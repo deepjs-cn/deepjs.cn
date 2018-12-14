@@ -7,6 +7,9 @@
 - [如何挑选高质量的 Node.js 模块](https://github.com/atian25/blog/issues/19)
   - [node-modules](https://github.com/node-modules) 是国内很多 Node.js 大神维护的 Group，里面的模块都经受住大规模的应用考虑，标准化和质量都不错
 - [为什么我不使用 shrinkwrap（lock）](https://zhuanlan.zhihu.com/p/22934066)
+- [monorepo 新浪潮](https://juejin.im/entry/586f00bc128fe100580a6f78)
+  - [用lerna-changelog 来梳理 changelog](https://github.com/lerna/lerna-changelog)
+  - [使用 monorepo 结构，管理多个 repo(示例)](https://github.com/galaxybing/lerna-repos-init.git)
 
 ## 常见问题
 

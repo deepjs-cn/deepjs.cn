@@ -8,6 +8,8 @@
 
 这些规范的目的都是为了 **JavaScript的模块化开发**，特别是在浏览器端的。目前这些规范的实现都能达成浏览器端模块化开发的目的。
 
+<!-- https://babel.docschina.org/docs/en/babel-preset-env#modules -->
+
 - CommonJS: 用于服务器，node.js的[模块系统](http://nodejs.org/docs/latest/api/modules.html)，就是参照[CommonJS规范](http://wiki.commonjs.org/wiki/Modules/1.1)实现的。
   - 在CommonJS中，有一个全局性方法require()，用于加载模块。
 - AMD规范: [异步模块定义](https://github.com/amdjs/amdjs-api/wiki/AMD) 用于浏览器
@@ -26,7 +28,8 @@
   - 由于 ES6 模块是编译时加载，使得静态分析成为可能。
   - ES6 模块不是对象，而是通过export命令显式指定输出的代码，再通过import命令输入。
   - 不再需要UMD模块格式了，将来服务器和浏览器都会支持 ES6 模块格式。
-- cjs: 即 CommonJS
+- cjs: 只是 commonjs 的一个别名
+- systemjs:
 
 参考：
 

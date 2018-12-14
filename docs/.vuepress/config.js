@@ -29,7 +29,7 @@ module.exports = ctx => ({
   ],
   // theme: '',
   themeConfig: {
-    sidebarDepth: 3,
+    sidebarDepth: 1,
     repo: 'kitdocs/kitdocs.org',
     editLinks: true,
     docsDir: 'docs',
@@ -75,15 +75,15 @@ module.exports = ctx => ({
     ['@vuepress/google-analytics', {
       ga: ''
     }],
-    ['@vuepress/pagination', true],
-    // {
-    //   postsFilter: ({ type }) => type === 'post',
-    //   postsSorter: (prev, next) => {
-    //     const prevTime = new Date(prev.frontmatter.date).getTime()
-    //     const nextTime = new Date(next.frontmatter.date).getTime()
-    //     return prevTime - nextTime > 0 ? -1 : 1
-    //   },
-    // }],
+    // ['@vuepress/pagination', true],
+    ['@vuepress/pagination', {
+      postsFilter: ({ type }) => type === 'post',
+      postsSorter: (prev, next) => {
+        const prevTime = new Date(prev.frontmatter.date).getTime()
+        const nextTime = new Date(next.frontmatter.date).getTime()
+        return prevTime - nextTime > 0 ? -1 : 1
+      },
+    }],
     [
       '@vuepress/last-updated',
       {

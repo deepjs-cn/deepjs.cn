@@ -1,5 +1,13 @@
 # Jest
 
+参考:
+
+- [jest docs](https://jestjs.io/docs/en/getting-started)
+  - [jest using es6 by babel-7](https://github.com/cloudyan/babel-7)
+  - [using-babel](https://jestjs.io/docs/en/getting-started#using-babel)
+
+其他:
+
 ```js
 "jest": {
   "verbose": true,
