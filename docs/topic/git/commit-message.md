@@ -2,6 +2,8 @@
 
 source: [angular CONTRIBUTING.md](https://github.com/angular/angular/blob/master/CONTRIBUTING.md)
 
+- [husky](https://www.npmjs.com/package/husky) can prevent bad git commit, git push and more 🐶 woof!
+
 ## 提交代码流程
 
 - 在新的分支中更改

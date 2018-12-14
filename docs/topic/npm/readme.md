@@ -9,7 +9,9 @@
 - [为什么我不使用 shrinkwrap（lock）](https://zhuanlan.zhihu.com/p/22934066)
 - [monorepo 新浪潮](https://juejin.im/entry/586f00bc128fe100580a6f78)
   - [用lerna-changelog 来梳理 changelog](https://github.com/lerna/lerna-changelog)
-  - [使用 monorepo 结构，管理多个 repo(示例)](https://github.com/galaxybing/lerna-repos-init.git)
+    - [使用 monorepo 结构，管理多个 repo(示例)](https://github.com/galaxybing/lerna-repos-init.git)
+  - [lerna管理前端packages的最佳实践](https://juejin.im/post/5a989fb451882555731b88c2)
+    - https://github.com/LittleBreak/lerna-best-practices
 
 ## 常见问题
 
