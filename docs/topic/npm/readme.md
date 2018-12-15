@@ -9,9 +9,13 @@
 - [为什么我不使用 shrinkwrap（lock）](https://zhuanlan.zhihu.com/p/22934066)
 - [monorepo 新浪潮](https://juejin.im/entry/586f00bc128fe100580a6f78)
   - [用lerna-changelog 来梳理 changelog](https://github.com/lerna/lerna-changelog)
-    - [使用 monorepo 结构，管理多个 repo(示例)](https://github.com/galaxybing/lerna-repos-init.git)
-  - [lerna管理前端packages的最佳实践](https://juejin.im/post/5a989fb451882555731b88c2)
-    - https://github.com/LittleBreak/lerna-best-practices
+  - [使用 monorepo 结构，管理多个 repo(示例)](https://github.com/galaxybing/lerna-repos-init.git)
+- [lerna管理前端packages的最佳实践](https://juejin.im/post/5a989fb451882555731b88c2)
+- [lerna 中文文档](https://github.com/chinanf-boy/lerna-zh)
+  - [常见问题](https://github.com/chinanf-boy/lerna-zh/blob/master/FAQ.zh.md)
+- [https://lernajs.io/](https://lernajs.io/)
+  - [lerna-wizard lerna的命令行向导](https://github.com/szarouski/lerna-wizard)
+- [greenkeeper](https://greenkeeper.io/docs) 自动化依赖关系管理
 
 ## 常见问题
 
