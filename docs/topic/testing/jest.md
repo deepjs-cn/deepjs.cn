@@ -16,6 +16,7 @@
   "transform": {
     "^.+\\.jsx?$": "babel-jest"
   },
+  "collectCoverage": true,
   "setupFiles": [
     "<rootDir>/scripts/testSetup.js"
   ],

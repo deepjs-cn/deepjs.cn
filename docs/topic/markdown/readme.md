@@ -1,143 +1,917 @@
 # MarkDown
 
-https://guides.github.com/features/mastering-markdown/
-https://github.github.com/gfm/#what-is-github-flavored-markdown-
+Markdown 语法的目标是：成为一种适用于网络的书写语言。
 
-Emoji Cheat Sheet - https://www.webfx.com/tools/emoji-cheat-sheet/
+可读性，无论如何，都是最重要的。一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 Setext、atx、Textile、reStructuredText、Grutatext 和 EtText，而最大灵感来源其实是纯文本电子邮件的格式。
 
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
+Markdown 最适合来书写使用说明、介绍或规范等，通常用于书写 Readme.md
 
-https://www.npmjs.com/package/vuepress-theme-resume
-https://www.npmjs.com/package/vuepress-theme-yubisaki
-https://www.npmjs.com/package/vuepress-theme-craftdocs
-https://www.npmjs.com/package/vuepress-theme-bulma
-https://www.npmjs.com/package/vuepress-theme-blogue
-https://www.npmjs.com/package/vuepress-theme-meteorlxy
-https://github.com/yliaho/vuepress-theme-valle
-https://github.com/FriendlyUser/vuepress-theme-cool
-https://www.npmjs.com/package/vuepress-theme-api
+参考：
 
-```html
-<body>
+- [Markdown wiki](http://zh.wikipedia.org/wiki/Markdown)
+- [markdown 官网](https://daringfireball.net/projects/markdown/syntax)
+- [CommonMark Spec by John MacFarlane](https://spec.commonmark.org/)
+- [Githun Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+- [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+- [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/)
+
+前言
+
+这个文档有点老了，参考这个来实现，简单明晰
+
+- [markdown-cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+- 也整理下这个 https://yuhongjun.github.io/tech/2017/05/02/Markdown-%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C-%E5%AE%8C%E6%95%B4%E6%95%B4%E7%90%86%E7%89%88.html#61-%E5%BC%95%E7%94%A8%E7%9A%84%E5%A4%9A%E5%B1%82%E5%B5%8C%E5%A5%97
+
+**转载自：** [Markdown-Syntax-CN](https://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/basics.md)@Wow!Ubuntu 有改动 ——by @cloudyan
+**NOTE:** This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to [Markdown: Syntax](http://daringfireball.net/projects/markdown/syntax).
+**声明：** 这份文档派生(fork)于[繁体中文版](http://markdown.tw/)，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里[查看它的源文件](http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/basics.md)。「繁体中文版的原始文件可以[查看这里](https://github.com/othree/markdown-syntax-zhtw/blob/master/basics.md)」--By @[riku](http://twitter.com/riku)
+**注：** 本项目托管于 [GitCafe](http://gitcafe.com/riku/Markdown-Syntax-CN/)，请通过"派生"和"合并请求"来帮忙改进本项目。
+
+# Markdown 语法说明
+
+<!-- toc
+
+- [概述](#overview)
+  - [宗旨](#philosophy)
+  - [兼容 HTML](#html)
+  - [特殊字符自动转换](#autoescape)
+- [区块元素](#block)
+  - [段落和换行](#p)
+  - [标题](#header)
+  - [区块引用](#blockquote)
+  - [列表](#list)
+  - [代码区块](#precode)
+  - [分隔线](#hr)
+- [区段元素](#span)
+  - [链接](#link)
+  - [强调](#em)
+  - [代码](#code)
+  - [图片](#img)
+- [其它](#misc)
+  - [反斜杠](#backslash)
+  - [自动链接](#autolink)
+- [感谢](#acknowledgement)
+- [Markdown 免费编辑器](#editor)
+
+--- -->
+
+## 概述
+
+### 宗旨
+
+Markdown 的目标是实现「易读易写」。
+
+可读性，无论如何，都是最重要的。一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 [Setext](http://docutils.sourceforge.net/mirror/setext.html)、[atx](http://www.aaronsw.com/2002/atx/)、[Textile](http://textism.com/tools/textile/)、[reStructuredText](http://docutils.sourceforge.net/rst.html)、[Grutatext](http://www.triptico.com/software/grutatxt.html) 和 [EtText](http://ettext.taint.org/doc/)，而最大灵感来源其实是纯文本电子邮件的格式。
+
+总之， Markdown 的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像*强调*。Markdown 的列表看起来，嗯，就是列表。Markdown 的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。
+
+### 兼容 HTML
+
+Markdown 语法的目标是：成为一种适用于网络的*书写*语言。
+
+Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想*不是*要使得 HTML 文档更容易书写。在我看来， HTML 已经很容易写了。Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种*发布*的格式，Markdown 是一种*书写*的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。
+
+不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。
+
+要制约的只有一些 HTML 区块元素――比如 `&lt;div&gt;`、`&lt;table&gt;`、`&lt;pre&gt;`、`&lt;p&gt;` 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的 `&lt;p&gt;` 标签。
+
+例子如下，在 Markdown 文件里加上一段 HTML 表格：
+
+``` html
+这是一个普通段落。
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Foo&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+这是另一个普通段落。
 ```
 
-https://github.com/sqrthree/vuepress-theme-api/blob/master/components/CURL/index.vue
+请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的`*强调*`会没有效果。
 
-<mermaid>
-graph TD
-  release -->|发布| master(test)
-  release -->|新需求| dev_xxx(Go shopping)
-  B --> C{Let me}
-  C -->|Two| D[Laptop]
-  C -->|Two| E[iPhone]
-  C -->|Three| F[Car]
-  C -->|Four| F[Mac]
-</mermaid>
-<mermaid>
-graph TB
-  c1-->a2
-  subgraph 主干分支
-  release-->a2
-  end
-  subgraph 开发分支
-  b1-->b2
-  end
-  subgraph Hotfix
-  c1-->c2
-  end
-</mermaid>
-<mermaid>
-sequenceDiagram
-  participant Hotfix
-  participant Release
-  Note right of Release: tag v1.0.0
-  Release->>Dev_1: 新需求1
-  Note right of Dev_1: 新需求就新建开发分支
-  loop 开发周期1
-    Dev_1->>Dev_1: 功能点
-  end
-  Release->>Hotfix: 线上问题!
-  Note left of Hotfix: 问题修复<br/>专用分支hotfix
-  Release->>Dev_2: 新需求2
-  Hotfix-->>Hotfix: fixed xxx
-  Release-->>Hotfix: 要经常同步Release
-  Hotfix->>Release: 修复上线!
-  Release-->>Release: 发布
-  Note right of Release: tag v1.0.1
-  Dev_1-x Release: 未同步最新，潜在风险
-  Release-->>Dev_1: 要经常同步Release
-  Dev_1->>Release: 需求1测试完，pull request
-  Release-->>Release: 发布
-  Note right of Release: tag v1.1.0
-  Release->>Hotfix: 线上问题2!
-  Hotfix-->>Hotfix: fixed xxx
-  Release-->>Hotfix: 要经常同步Release
-  Hotfix->>Release: 修复上线!
-  Release-->>Release: 发布
-  Note right of Release: tag v1.1.1
-  Release-->>Dev_2: 要经常同步Release
-  loop 开发周期2
-    Dev_2->>Dev_2: 功能点
-  end
-  Dev_2-x Release: 未同步最新，潜在风险
-  Release-->>Dev_2: 要经常同步Release
-  Dev_2->>Release: 需求2测试完，pull request
-  Release-->>Release: 发布
-  Note right of Release: tag v1.2.0
-</mermaid>
+HTML 的区段（行内）标签如 `&lt;span&gt;`、`&lt;cite&gt;`、`&lt;del&gt;` 可以在 Markdown 的段落、列表或是标题里随意使用。依照个人习惯，甚至可以不用 Markdown 格式，而直接采用 HTML 标签来格式化。举例说明：如果比较喜欢 HTML 的 `&lt;a&gt;` 或 `&lt;img&gt;` 标签，可以直接使用这些标签，而不用 Markdown 提供的链接或是图像标签语法。
 
-<mermaid>
-gantt
-  dateFormat     YYYY-MM-DD
-  title 甘特图
-  section 服务端
-  功能1           :a1, 2014-01-01, 30d
-  功能2           :after a1  , 20d
-  section 设计稿
-  功能1           :a1, 2014-01-01, 30d
-  功能2           :after a1  , 20d
-  section 客户端
-  功能1           :2014-01-12, 12d
-  功能1           : 24d
-</mermaid>
+和处在 HTML 区块标签间不同，Markdown 语法在 HTML 区段标签间是有效的。
 
-<mermaid>
-gantt
-  dateFormat     YYYY-MM-DD
-  title 甘特图
-  section A section
-  Completed task            :done,    des1, 2014-01-06,2014-01-08
-  Active task               :active,  des2, 2014-01-09, 3d
-  Future task               :         des3, after des2, 5d
-  Future task2              :         des4, after des3, 5d
-  section Critical tasks
-  Completed task in the critical line :crit, done, 2014-01-06,24h
-  Implement parser and jison          :crit, done, after des1, 2d
-  Create tests for parser             :crit, active, 3d
-  Future task in critical line        :crit, 5d
-  Create tests for renderer           :2d
-  Add to mermaid                      :1d
-  section Documentation
-  Describe gantt syntax               :active, a1, after des1, 3d
-  Add gantt diagram to demo page      :after a1  , 20h
-  Add another diagram to demo page    :doc1, after a1  , 48h
-  section Last section
-  Describe gantt syntax               :after doc1, 3d
-  Add gantt diagram to demo page      :20h
-  Add another diagram to demo page    :48h
-</mermaid>
+### 特殊字符自动转换
 
-```conf
-[alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  lg = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
-  mg = merge --no-ff
+在 HTML 文件中，有两个字符需要特殊处理： `&lt;` 和 `&amp;` 。 `&lt;` 符号用于起始标签，`&amp;` 符号则用于标记 HTML 实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是 `&amp;lt;` 和 `&amp;amp;`。
+
+`&amp;` 字符尤其让网络文档编写者受折磨，如果你要打「`AT&amp;T`」 ，你必须要写成「`AT&amp;amp;T`」。而网址中的 `&amp;` 字符也要转换。比如你要链接到：
+
+``` html
+http://images.google.com/images?num=30&amp;q=larry+bird
 ```
+
+你必须要把网址转换写为：
+
+``` html
+http://images.google.com/images?num=30&amp;amp;q=larry+bird
+```
+
+才能放到链接标签的 `href` 属性里。不用说也知道这很容易忽略，这也可能是 HTML 标准检验所检查到的错误中，数量最多的。
+
+Markdown 让你可以自然地书写字符，需要转换的由它来处理好了。如果你使用的 `&amp;` 字符是 HTML 字符实体的一部分，它会保留原状，否则它会被转换成 `&amp;amp`;。
+
+所以你如果要在文档中插入一个版权符号 `©`，你可以这样写：
+
+``` html
+&amp;copy;
+```
+
+Markdown 会保留它不动。而若你写：
+
+``` html
+AT&amp;T
+```
+
+Markdown 就会将它转为：
+
+``` html
+AT&amp;amp;T
+```
+
+类似的状况也会发生在 `&lt;` 符号上，因为 Markdown 允许 [兼容 HTML](#html) ，如果你是把 `&lt;` 符号作为 HTML 标签的定界符使用，那 Markdown 也不会对它做任何转换，但是如果你写：
+
+``` html
+4 &lt; 5
+```
+
+Markdown 将会把它转换为：
+
+``` html
+4 &amp;lt; 5
+```
+
+不过需要注意的是，code 范围内，不论是行内还是区块， `&lt;` 和 `&amp;` 两个符号都*一定*会被转换成 HTML 实体，这项特性让你可以很容易地用 Markdown 写 HTML code （和 HTML 相对而言， HTML 语法中，你要把所有的 `&lt;` 和 `&amp;` 都转换为 HTML 实体，才能在 HTML 文件里面写出 HTML code。）
+
+---
+
+## 区块元素
+
+### 段落和换行
+
+一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。
+
+「由一个或多个连续的文本行组成」这句话其实暗示了 Markdown 允许段落内的强迫换行（插入换行符），这个特性和其他大部分的 text-to-HTML 格式不一样（包括 Movable Type 的「Convert Line Breaks」选项），其它的格式会把每个换行符都转成 `&lt;br /&gt;` 标签。
+
+如果你*确实*想要依赖 Markdown 来插入 `&lt;br /&gt;` 标签的话，在插入处先按入两个以上的空格然后回车。
+
+的确，需要多费点事（多加空格）来产生 `&lt;br /&gt;` ，但是简单地「每个换行都转换为 `&lt;br /&gt;`」的方法在 Markdown 中并不适合， Markdown 中 email 式的 [区块引用](#blockquote) 和多段落的 [列表](#list) 在使用换行来排版的时候，不但更好用，还更方便阅读。
+
+### 标题
+
+Markdown 支持两种标题的语法，类 [Setext](http://docutils.sourceforge.net/mirror/setext.html) 和类 [atx](http://www.aaronsw.com/2002/atx/) 形式。
+
+类 Setext 形式是用底线的形式，利用 `=` （最高阶标题）和 `-` （第二阶标题），例如：
+
+``` html
+This is an H1
+=============
+
+This is an H2
+-------------
+```
+
+任何数量的 `=` 和 `-` 都可以有效果。
+
+类 Atx 形式则是在行首插入 1 到 6 个 `#` ，对应到标题 1 到 6 阶，例如：
+
+``` html
+# 这是 H1
+
+## 这是 H2
+
+###### 这是 H6
+```
+
+你可以选择性地「闭合」类 atx 样式的标题，这纯粹只是美观用的，若是觉得这样看起来比较舒适，你就可以在行尾加上 `#`，而行尾的 `#` 数量也不用和开头一样（行首的井字符数量决定标题的阶数）：
+
+``` html
+# 这是 H1 #
+
+## 这是 H2 ##
+
+### 这是 H3 ######
+```
+
+### 区块引用 Blockquotes
+
+Markdown 标记区块引用是使用类似 email 中用 `&gt;` 的引用方式。如果你还熟悉在 email 信件中的引言部分，你就知道怎么在 Markdown 文件中建立一个区块引用，那会看起来像是你自己先断好行，然后在每行的最前面加上 `&gt;` ：
+
+``` html
+&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+&gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+&gt;
+&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+&gt; id sem consectetuer libero luctus adipiscing.
+```
+
+Markdown 也允许你偷懒只在整个段落的第一行最前面加上 `&gt;` ：
+
+``` html
+&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.
+```
+
+区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 `&gt;` ：
+
+``` html
+&gt; This is the first level of quoting.
+&gt;
+&gt; &gt; This is nested blockquote.
+&gt;
+&gt; Back to the first level.
+```
+
+引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：
+
+``` html
+&gt; ## 这是一个标题。
+&gt;
+&gt; 1.   这是第一行列表项。
+&gt; 2.   这是第二行列表项。
+&gt;
+&gt; 给出一些例子代码：
+&gt;
+&gt;     return shell_exec("echo $input | $markdown_script");
+```
+
+任何像样的文本编辑器都能轻松地建立 email 型的引用。例如在 BBEdit 中，你可以选取文字后然后从选单中选择*增加引用阶层*。
+
+### 列表
+
+Markdown 支持有序列表和无序列表。
+
+无序列表使用星号、加号或是减号作为列表标记：
+
+``` html
+* Red
+* Green
+* Blue
+```
+
+等同于：
+
+``` html
++ Red
++ Green
++ Blue
+```
+
+也等同于：
+
+``` html
+- Red
+- Green
+- Blue
+```
+
+有序列表则使用数字接着一个英文句点：
+
+``` html
+1. Bird
+2. McHale
+3. Parish
+```
+
+很重要的一点是，你在列表标记上使用的数字并不会影响输出的 HTML 结果，上面的列表所产生的 HTML 标记为：
+
+``` html
+&lt;ol&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;Parish&lt;/li&gt;
+&lt;/ol&gt;
+```
+
+如果你的列表标记写成：
+
+``` html
+1. Bird
+1. McHale
+1. Parish
+```
+
+或甚至是：
+
+``` html
+3. Bird
+1. McHale
+8. Parish
+```
+
+你都会得到完全相同的 HTML 输出。重点在于，你可以让 Markdown 文件的列表数字和输出的结果相同，或是你懒一点，你可以完全不用在意数字的正确性。
+
+如果你使用懒惰的写法，建议第一个项目最好还是从 1. 开始，因为 Markdown 未来可能会支持有序列表的 start 属性。
+
+列表项目标记通常是放在最左边，但是其实也可以缩进，最多 3 个空格，项目标记后面则一定要接着至少一个空格或制表符。
+
+要让列表看起来更漂亮，你可以把内容用固定的缩进整理好：
+
+``` html
+* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+    viverra nec, fringilla in, laoreet vitae, risus.
+* Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+    Suspendisse id sem consectetuer libero luctus adipiscing.
+```
+
+但是如果你懒，那也行：
+
+``` html
+* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.
+* Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.
+```
+
+如果列表项目间用空行分开，在输出 HTML 时 Markdown 就会将项目内容用 `&lt;p&gt;`
+标签包起来，举例来说：
+
+``` html
+* Bird
+* Magic
+```
+
+会被转换为：
+
+``` html
+&lt;ul&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;Magic&lt;/li&gt;
+&lt;/ul&gt;
+```
+
+但是这个：
+
+``` html
+* Bird
+
+* Magic
+```
+
+会被转换为：
+
+``` html
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+```
+
+列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符：
+
+``` html
+1. This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
+
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
+
+2. Suspendisse id sem consectetuer libero luctus adipiscing.
+```
+
+如果你每行都有缩进，看起来会看好很多，当然，再次地，如果你很懒惰，Markdown 也允许：
+
+``` html
+* This is a list item with two paragraphs.
+
+    This is the second paragraph in the list item. You're
+only required to indent the first line. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit.
+
+* Another item in the same list.
+```
+
+如果要在列表项目内放进引用，那 `&gt;` 就需要缩进：
+
+``` html
+*   A list item with a blockquote:
+
+    &gt; This is a blockquote
+    &gt; inside a list item.
+```
+
+如果要放代码区块的话，该区块就需要缩进*两次*，也就是 8 个空格或是 2 个制表符：
+
+``` html
+*   一列表项包含一个列表区块：
+
+        &lt;代码写在这&gt;
+```
+
+当然，项目列表很可能会不小心产生，像是下面这样的写法：
+
+``` html
+1986. What a great season.
+```
+
+换句话说，也就是在行首出现*数字-句点-空白*，要避免这样的状况，你可以在句点前面加上反斜杠。
+
+``` html
+1986\. What a great season.
+```
+
+### 代码区块
+
+和程序相关的写作或是标签语言原始码通常会有已经排版好的代码区块，通常这些区块我们并不希望它以一般段落文件的方式去排版，而是照原来的样子显示，Markdown 会用 `&lt;pre&gt;` 和 `&lt;code&gt;` 标签来把代码区块包起来。
+
+要在 Markdown 中建立代码区块很简单，只要简单地缩进 4 个空格或是 1 个制表符就可以，例如，下面的输入：
+
+``` html
+这是一个普通段落：
+
+    这是一个代码区块。
+```
+
+Markdown 会转换成：
+
+``` html
+&lt;p&gt;这是一个普通段落：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;这是一个代码区块。
+&lt;/code&gt;&lt;/pre&gt;
+```
+
+这个每行一阶的缩进（4 个空格或是 1 个制表符），都会被移除，例如：
+
+``` html
+Here is an example of AppleScript:
+
+    tell application "Foo"
+        beep
+    end tell
+```
+
+会被转换为：
+
+``` html
+&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tell application "Foo"
+    beep
+end tell
+&lt;/code&gt;&lt;/pre&gt;
+```
+
+一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。
+
+在代码区块里面， `&amp;` 、 `&lt;` 和 `&gt;` 会自动转成 HTML 实体，这样的方式让你非常容易使用 Markdown 插入范例用的 HTML 原始码，只需要复制贴上，再加上缩进就可以了，剩下的 Markdown 都会帮你处理，例如：
+
+``` html
+    &lt;div class="footer"&gt;
+        &amp;copy; 2004 Foo Corporation
+    &lt;/div&gt;
+```
+
+会被转换为：
+
+``` html
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class="footer"&amp;gt;
+    &amp;amp;copy; 2004 Foo Corporation
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+```
+
+代码区块中，一般的 Markdown 语法不会被转换，像是星号便只是星号，这表示你可以很容易地以 Markdown 语法撰写 Markdown 语法相关的文件。
+
+### 分隔线
+
+你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：
+
+``` html
+* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+```
+
+---
+
+## 区段元素
+
+### 链接
+
+Markdown 支持两种形式的链接语法： *行内式*和*参考式*两种形式。
+
+不管是哪一种，链接文字都是用 [方括号] 来标记。
+
+要建立一个*行内式*的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：
+
+``` html
+This is [an example](http://example.com/ "Title") inline link.
+
+[This link](http://example.net/) has no title attribute.
+```
+
+会产生：
+
+``` html
+&lt;p&gt;This is &lt;a href="http://example.com/" title="Title"&gt;
+an example&lt;/a&gt; inline link.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://example.net/"&gt;This link&lt;/a&gt; has no
+title attribute.&lt;/p&gt;
+```
+
+如果你是要链接到同样主机的资源，你可以使用相对路径：
+
+``` html
+See my [About](/about/) page for details.
+```
+
+*参考式*的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
+
+``` html
+This is [an example][id] reference-style link.
+```
+
+你也可以选择性地在两个方括号中间加上一个空格：
+
+``` html
+This is [an example] [id] reference-style link.
+```
+
+接着，在文件的任意处，你可以把这个标记的链接内容定义出来：
+
+``` html
+[id]: http://example.com/  "Optional Title Here"
+```
+
+链接内容定义的形式为：
+
+- 方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字
+- 接着一个冒号
+- 接着一个以上的空格或制表符
+- 接着链接的网址
+- 选择性地接着 title 内容，可以用单引号、双引号或是括弧包着
+
+下面这三种链接的定义都是相同：
+
+``` html
+[foo]: http://example.com/  "Optional Title Here"
+[foo]: http://example.com/  'Optional Title Here'
+[foo]: http://example.com/  (Optional Title Here)
+```
+
+**请注意：**有一个已知的问题是 Markdown.pl 1.0.1 会忽略单引号包起来的链接 title。
+
+链接网址也可以用方括号包起来：
+
+``` html
+[id]: &lt;http://example.com/&gt;  "Optional Title Here"
+```
+
+你也可以把 title 属性放到下一行，也可以加一些缩进，若网址太长的话，这样会比较好看：
+
+``` html
+[id]: http://example.com/longish/path/to/resource/here
+    "Optional Title Here"
+```
+
+网址定义只有在产生链接的时候用到，并不会直接出现在文件之中。
+
+链接辨别标签可以有字母、数字、空白和标点符号，但是并*不*区分大小写，因此下面两个链接是一样的：
+
+``` html
+[link text][a]
+[link text][A]
+```
+
+*隐式链接标记*功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号，如果你要让 "Google" 链接到 google.com，你可以简化成：
+
+``` html
+[Google][]
+```
+
+然后定义链接内容：
+
+``` html
+[Google]: http://google.com/
+```
+
+由于链接文字可能包含空白，所以这种简化型的标记内也许包含多个单词：
+
+``` html
+Visit [Daring Fireball][] for more information.
+```
+
+然后接着定义链接：
+
+``` html
+[Daring Fireball]: http://daringfireball.net/
+```
+
+链接的定义可以放在文件中的任何一个地方，我比较偏好直接放在链接出现段落的后面，你也可以把它放在文件最后面，就像是注解一样。
+
+下面是一个参考式链接的范例：
+
+``` html
+I get 10 times more traffic from [Google] [1] than from
+[Yahoo] [2] or [MSN] [3].
+
+  [1]: http://google.com/        "Google"
+  [2]: http://search.yahoo.com/  "Yahoo Search"
+  [3]: http://search.msn.com/    "MSN Search"
+```
+
+如果改成用链接名称的方式写：
+
+``` html
+I get 10 times more traffic from [Google][] than from
+[Yahoo][] or [MSN][].
+
+  [google]: http://google.com/        "Google"
+  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
+  [msn]:    http://search.msn.com/    "MSN Search"
+```
+
+上面两种写法都会产生下面的 HTML。
+
+``` html
+&lt;p&gt;I get 10 times more traffic from &lt;a href="http://google.com/"
+title="Google"&gt;Google&lt;/a&gt; than from
+&lt;a href="http://search.yahoo.com/" title="Yahoo Search"&gt;Yahoo&lt;/a&gt;
+or &lt;a href="http://search.msn.com/" title="MSN Search"&gt;MSN&lt;/a&gt;.&lt;/p&gt;
+```
+
+下面是用行内式写的同样一段内容的 Markdown 文件，提供作为比较之用：
+
+``` html
+I get 10 times more traffic from [Google](http://google.com/ "Google")
+than from [Yahoo](http://search.yahoo.com/ "Yahoo Search") or
+[MSN](http://search.msn.com/ "MSN Search").
+```
+
+参考式的链接其实重点不在于它比较好写，而是它比较好读，比较一下上面的范例，使用参考式的文章本身只有 81 个字符，但是用行内形式的却会增加到 176 个字元，如果是用纯 HTML 格式来写，会有 234 个字元，在 HTML 格式中，标签比文本还要多。
+
+使用 Markdown 的参考式链接，可以让文件更像是浏览器最后产生的结果，让你可以把一些标记相关的元数据移到段落文字之外，你就可以增加链接而不让文章的阅读感觉被打断。
+
+### 强调
+
+Markdown 使用星号（`*`）和底线（`_`）作为标记强调字词的符号，被 `*` 或 `_` 包围的字词会被转成用 `&lt;em&gt;` 标签包围，用两个 `*` 或 `_` 包起来的话，则会被转成 `&lt;strong&gt;`，例如：
+
+``` html
+*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__
+```
+
+会转成：
+
+``` html
+&lt;em&gt;single asterisks&lt;/em&gt;
+
+&lt;em&gt;single underscores&lt;/em&gt;
+
+&lt;strong&gt;double asterisks&lt;/strong&gt;
+
+&lt;strong&gt;double underscores&lt;/strong&gt;
+```
+
+你可以随便用你喜欢的样式，唯一的限制是，你用什么符号开启标签，就要用什么符号结束。
+
+强调也可以直接插在文字中间：
+
+``` html
+un*frigging*believable
+```
+
+但是**如果你的 `*` 和 `_` 两边都有空白的话，它们就只会被当成普通的符号**。
+
+如果要在文字前后直接插入普通的星号或底线，你可以用反斜线：
+
+``` html
+\*this text is surrounded by literal asterisks\*
+```
+
+### 代码
+
+如果要标记一小段行内代码，你可以用反引号把它包起来（```），例如：
+
+``` html
+Use the `printf()` function.
+```
+
+会产生：
+
+``` html
+&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
+```
+
+如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：
+
+``` html
+``There is a literal backtick (`) here.``
+```
+
+这段语法会产生：
+
+``` html
+&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;
+```
+
+代码区段的起始和结束端都可以放入一个空白，起始端后面一个，结束端前面一个，这样你就可以在区段的一开始就插入反引号：
+
+``` html
+A single backtick in a code span: `` ` ``
+
+A backtick-delimited string in a code span: `` `foo` ``
+```
+
+会产生：
+
+``` html
+&lt;p&gt;A single backtick in a code span: &lt;code&gt;`&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;
+```
+
+在代码区段内，`&amp;` 和方括号**都**会被自动地转成 HTML 实体，这使得插入 HTML 原始码变得很容易，Markdown 会把下面这段：
+
+``` html
+Please don't use any `&lt;blink&gt;` tags.
+```
+
+转为：
+
+``` html
+&lt;p&gt;Please don't use any &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+```
+
+你也可以这样写：
+
+``` html
+`&amp;#8212;` is the decimal-encoded equivalent of `&amp;mdash;`.
+```
+
+以产生：
+
+``` html
+&lt;p&gt;&lt;code&gt;&amp;amp;#8212;&lt;/code&gt; is the decimal-encoded
+equivalent of &lt;code&gt;&amp;amp;mdash;&lt;/code&gt;.&lt;/p&gt;
+```
+
+### 图片
+
+很明显地，要在纯文字应用中设计一个「自然」的语法来插入图片是有一定难度的。
+
+Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： *行内式*和*参考式*。
+
+行内式的图片语法看起来像是：
+
+``` html
+![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg "Optional title")
+```
+
+详细叙述如下：
+
+- 一个惊叹号 `!`
+- 接着一个方括号，里面放上图片的替代文字
+- 接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上
+选择性的 'title' 文字。
+
+参考式的图片语法则长得像这样：
+
+``` html
+![Alt text][id]
+```
+
+「id」是图片参考的名称，图片参考的定义方式则和连结参考一样：
+
+``` html
+[id]: url/to/image  "Optional title attribute"
+```
+
+到目前为止， Markdown 还没有办法指定图片的宽高，如果你需要的话，你可以使用普通的 `&lt;img&gt;` 标签。
+
+---
+
+## 其它
+
+### 自动链接
+
+Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用方括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如：
+
+``` html
+&lt;http://example.com/&gt;
+```
+
+Markdown 会转为：
+
+``` html
+&lt;a href="http://example.com/"&gt;http://example.com/&lt;/a&gt;
+```
+
+邮址的自动链接也很类似，只是 Markdown 会先做一个编码转换的过程，把文字字符转成 16 进位码的 HTML 实体，这样的格式可以糊弄一些不好的邮址收集机器人，例如：
+
+``` html
+&lt;address@example.com&gt;
+```
+
+Markdown 会转成：
+
+``` html
+&lt;a href="&amp;#x6D;&amp;#x61;i&amp;#x6C;&amp;#x74;&amp;#x6F;:&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;
+&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6C;e&amp;#x2E;&amp;#99;&amp;#111;
+&amp;#109;"&gt;&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;
+&amp;#109;&amp;#x70;&amp;#x6C;e&amp;#x2E;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;
+```
+
+在浏览器里面，这段字串（其实是 `&lt;a href="mailto:address@example.com"&gt;address@example.com&lt;/a&gt;`）会变成一个可以点击的「address@example.com」链接。
+
+（这种作法虽然可以糊弄不少的机器人，但并不能全部挡下来，不过总比什么都不做好些。不管怎样，公开你的信箱终究会引来广告信件的。）
+
+### 反斜杠
+
+Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用 `&lt;em&gt;` 标签），你可以在星号的前面加上反斜杠：
+
+``` html
+\*literal asterisks\*
+```
+
+Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：
+
+``` html
+\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号
+```
+
+## 感谢
+
+感谢 [leafy7382](https://twitter.com/#!/leafy7382) 协助翻译，[hlb](http://iamhlb.com/)、[Randylien](http://twitter.com/randylien) 帮忙润稿，[ethantw](https://twitter.com/#!/ethantw) 的[汉字标准格式・CSS Reset](http://ethantw.net/projects/han/)， [WM](http://kidwm.net/) 回报文字错误。
+
+感谢 [fenprace](https://github.com/fenprace)，[addv](https://github.com/addv)。
+
+---
+
+## Markdown 免费编辑器
+
+Windows 平台
+
+- [MarkdownPad](http://markdownpad.com/)　　<small>我现在使用的是这个！</small>
+- [MarkPad](http://code52.org/DownmarkerWPF/)
+
+Linux 平台
+
+- [ReText](http://sourceforge.net/p/retext/home/ReText/)
+
+Mac 平台
+
+- [Mou](http://mouapp.com/)
+
+在线编辑器
+
+- [mahua.jser.me](http://mahua.jser.me/)
+- [Markable.in](http://markable.in/)
+- [Dillinger.io](http://dillinger.io/)
+
+浏览器插件
+
+- [MaDe](https://chrome.google.com/webstore/detail/oknndfeeopgpibecfjljjfanledpbkog) (Chrome)
+
+高级应用
+
+- [Sublime Text 2](http://www.sublimetext.com/2) + [MarkdownEditing](http://ttscoff.github.com/MarkdownEditing/) / [教程](http://lucifr.com/2012/07/12/markdownediting-for-sublime-text-2/)
+
+***如有更好的 Markdown 免费编辑器推荐，请到[这里反馈](https://gitcafe.com/riku/Markdown-Syntax-CN/tickets/1)，谢谢！***
+
+### 扩展阅读：
+
+- [Markdown wiki](http://zh.wikipedia.org/wiki/Markdown)
+- [Markdown 写作浅谈](http://www.yangzhiping.com/tech/r-markdown-knitr.html)
+- [Markdown 官网](http://daringfireball.net/projects/markdown/syntax)
+- [Markdown example](http://github.github.com/github-flavored-markdown/sample_content.html)
+- [Markdown 最新消息](http://www.zhihu.com/topic/19590742/newest)

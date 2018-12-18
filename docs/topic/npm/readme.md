@@ -7,15 +7,62 @@
 - [如何挑选高质量的 Node.js 模块](https://github.com/atian25/blog/issues/19)
   - [node-modules](https://github.com/node-modules) 是国内很多 Node.js 大神维护的 Group，里面的模块都经受住大规模的应用考虑，标准化和质量都不错
 - [为什么我不使用 shrinkwrap（lock）](https://zhuanlan.zhihu.com/p/22934066)
+- [greenkeeper](https://greenkeeper.io/docs) 自动化依赖关系管理
+- [puppeteer神器官方文档](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser)
+  - [Puppeteer 中文文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
+- [puppeteer 安装失败的解决方案](https://www.cnblogs.com/1394htw/p/9627260.html)
+  - 你可能需要看一下[chromium下载跳坑](https://segmentfault.com/a/1190000012606616)这个方案，但还是需要翻出去下载，
+  - 如果上面方案不行，那么你可能需要了解下[puppeteer 安装失败的解决办法](https://juejin.im/post/5b4a043751882519790c7ad7)，就是去拿到下载的那个版本数字，再去下载，但是可能遇到的问题是找不到downloadURL那堆链接的文件，
+  - 那么你就需要[puppeteer环境部署问题小记](https://github.com/billfeller/billfeller.github.io/issues/232)这个方案，
+```js
+1、安装 puppeteer NPM包后，查询package.json配置，获取依赖 CHROMIUM 版本号：
+
+"puppeteer": {
+"chromium_revision": "543305"
+},
+2、将 chromium_revision 属性值替换到 BrowserFetch.js 下载路径，根据系统环境，计算获取完整的下载地址，完成下载任务：
+
+const DEFAULT_DOWNLOAD_HOST = 'https://storage.googleapis.com';
+const downloadURLs = {
+linux: '%s/chromium-browser-snapshots/Linux_x64/%d/chrome-linux.zip',
+mac: '%s/chromium-browser-snapshots/Mac/%d/chrome-mac.zip',
+win32: '%s/chromium-browser-snapshots/Win/%d/chrome-win32.zip',
+win64: '%s/chromium-browser-snapshots/Win_x64/%d/chrome-win32.zip',
+};
+
+// ...
+
+const url = util.format(downloadURLs[this._platform], this._downloadHost, revision);
+比如，https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/543305/chrome-win32.zip
+
+3、将下载的 chrome-xxx.zip 解压到puppeteer指定路径 puppeteer/.local-chromium/{_platform}-{chromium_revision}/chrome-xxx 下即可；
+比如：node_modules\puppeteer.local-chromium\win64-543305\chrome-win32
+
+这里给出了很多其他问题的解决方案，
+```
+- 在线的集成服务
+  - [TravisCI](https://travis-ci.org/)
+  - [CircleCI](https://circleci.com/)
+  - [appveyor](http://www.appveyor.com/)
+    - [利用 AppVeyor 实现 GitHub 托管项目的自动化集成](https://blog.csdn.net/zhangzq86/article/details/55657495)
+
+关于 lerna
+
+多模块管理工具，用来帮助维护monorepo
+
+P.S.Lerna是Babel自己日用并开源的工具，见 [Why is Babel a monorepo?](https://github.com/babel/babel/blob/master/doc/design/monorepo.md)
+
 - [monorepo 新浪潮](https://juejin.im/entry/586f00bc128fe100580a6f78)
+  - monorepo(monolithic repository)，与multirepo相对，分别是单代码仓库与多代码仓库（one-repository-per-module）
+  - [lerna入门指南](http://www.ayqy.net/blog/lerna%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/)
   - [用lerna-changelog 来梳理 changelog](https://github.com/lerna/lerna-changelog)
   - [使用 monorepo 结构，管理多个 repo(示例)](https://github.com/galaxybing/lerna-repos-init.git)
-- [lerna管理前端packages的最佳实践](https://juejin.im/post/5a989fb451882555731b88c2)
+  - [](https://github.com/pigcan/monorepo-example)
 - [lerna 中文文档](https://github.com/chinanf-boy/lerna-zh)
   - [常见问题](https://github.com/chinanf-boy/lerna-zh/blob/master/FAQ.zh.md)
 - [https://lernajs.io/](https://lernajs.io/)
   - [lerna-wizard lerna的命令行向导](https://github.com/szarouski/lerna-wizard)
-- [greenkeeper](https://greenkeeper.io/docs) 自动化依赖关系管理
+- [使用lerna优雅地管理多个package](https://zhuanlan.zhihu.com/p/35237759)
 
 ## 常见问题
 
@@ -27,6 +74,8 @@
 
 - npm
   - `npm list -g --depth=0`
+    - 查看全局包位置 `npm root -g`
+    - 全局模块安装路径 `/usr/local/lib/node_modules`，
   - `npm i -g xxx`
   - `npm uninstall -g xxx`
   - 安装最新版 `npm i npm@latest -g`

@@ -39,3 +39,18 @@
 
 - [解决provisional headers are shown的过程](https://blog.xinshangshangxin.com/2015/04/20/%E8%A7%A3%E5%86%B3provisional-headers-are-shown%E7%9A%84%E8%BF%87%E7%A8%8B/)
 - [Node.js 专栏](https://www.yuque.com/egg/nodejs)
+
+- [你不知道的 JS 错误和调用栈常识](https://zhuanlan.zhihu.com/p/25644447)
+- [前端开发技术日报](https://github.com/kujian/frontendDaily)
+
+- [缓存策略](http://imweb.io/topic/55c6f9bac222e3af6ce235b9)
+
+https://www.npmjs.com/package/vuepress-theme-resume
+https://www.npmjs.com/package/vuepress-theme-yubisaki
+https://www.npmjs.com/package/vuepress-theme-craftdocs
+https://www.npmjs.com/package/vuepress-theme-bulma
+https://www.npmjs.com/package/vuepress-theme-blogue
+https://www.npmjs.com/package/vuepress-theme-meteorlxy
+https://github.com/yliaho/vuepress-theme-valle
+https://github.com/FriendlyUser/vuepress-theme-cool
+https://www.npmjs.com/package/vuepress-theme-api
