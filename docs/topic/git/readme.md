@@ -11,6 +11,10 @@
 - 如何撤销提交，撤销前一次，前N次
 - 如何删除远程分支
 - 如何拉取一个本地不存在的远程分支到本地
+  - `git fetch origin dev`
+  - `git fetch origin 远程分支名x:本地分支名x`
+  - `git checkout -b 本地分支名x origin/远程分支名x`
+  - `git branch -vv`
 - 合并分支，是否保留具体日志记录 `git merge --no-ff`
 - 如何绑定多个账号，多个 github、gitlab 等账户并存
 - 常见操作的逆操作都是什么，如何操作
@@ -18,7 +22,8 @@
   - 如果合并了两个不同的开始提交的仓库，在新的 git 会发现这两个仓库可能不是同一个，为了防止开发者上传错误，于是就给下面的提示
   - `fatal: refusing to merge unrelated histories`
   - [解决方法](https://blog.csdn.net/lindexi_gd/article/details/52554159) 如下
-  - `git pull --allow-unrelated-histories`
+  - `git pull <remote-url> --allow-unrelated-histories`
+- [git 需要知道的1000个问题](https://lindexi.gitee.io/post/git-%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%841000%E4%B8%AA%E9%97%AE%E9%A2%98.html)
 
 ### 知识扩展
 
