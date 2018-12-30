@@ -16,7 +16,7 @@
   - `git checkout -b 本地分支名x origin/远程分支名x`
   - `git branch -vv`
 - 合并分支，是否保留具体日志记录 `git merge --no-ff`
-- 如何绑定多个账号，多个 github、gitlab 等账户并存
+- [如何绑定多个账号，多个 github、gitlab 等账户并存?](#)
 - 常见操作的逆操作都是什么，如何操作
 - git无法pull仓库refusing to merge unrelated histories(git 项目A，提交到 git 项目 B上，无法 pull)
   - 如果合并了两个不同的开始提交的仓库，在新的 git 会发现这两个仓库可能不是同一个，为了防止开发者上传错误，于是就给下面的提示
@@ -65,25 +65,77 @@ Pro Git 2
 
 令不同 Host 实际映射到同一 HostName，但密钥文件不同。Host 前缀可自定义如xxx。配置文件 `.ssh/config`，
 
+如果是 Windows，配置为 `C:\Program Files\Git\etc\ssh\ssh_config`
+
 ```conf
-# default
-Host github.com
-HostName github.com
-User git1
-IdentityFile ~/.ssh/id_rsa
+# 配置示例
+# 该文件用于配置私钥对应的服务器
 
-# two
-Host gitlab.xxx.com
-HostName gitlab.xxx.com
-User git2
-IdentityFile ~/.ssh/id_rsa_2
+# test
+# 测试github
+# ssh -T git@github.com
+# 测试oschina
+# ssh -T git@git.oschina.net
 
-# three
-Host xxx.github.com
-HostName github.com
-User git2
-IdentityFile ~/.ssh/id_rsa_3
+# Default github user(xxx1@qq.com)
+# HostName 这个是真实的域名地址
+Host git@github.com
+  HostName https://github.com
+  User cloudyan
+  IdentityFile ~/.ssh/id_rsa
+  # Port 22
+  # IdentityFile C:\\Users\\Alice\\.ssh\\id_rsa
+
+# second user(xxx2@qq.com)
+# 建一个github别名，新建的帐号使用这个别名做克隆和更新
+Host git@github.com
+  HostName https://github.com
+  User yue
+  IdentityFile ~/.ssh/yue_rsa
+
+# 公司的gitlab
+Host git@gitlab.iqianggou.com
+  HostName https://gitlab.iqianggou.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+# 配置示例
+# Host git@github.com
+#   HostName https://github.com
+#   User cloudyan
+#   IdentityFile ~/.ssh/id_rsa
+#   # Port 22
+#   # IdentityFile C:\\Users\\Alice\\.ssh\\id_rsa
+#   # PreferredAuthentications
+
+# 说明
+# HostName      这个是真实的域名地址
+# User          配置使用用户名
+# IdentityFile  这里是id_rsa的地址
+# PreferredAuthentications 配置登录时用什么权限认证--可设为 publickey,password publickey,keyboard-interactive等
 ```
+
+这种情况下，需要几点注意
+
+remote pull push的时候有问题，因为要设置邮箱问题了 pull的时候识别的是邮箱，2个github账号，2个邮箱，我们自然不能使用global的user.email了
+
+```bash
+# 取消global
+git config --global --unset user.name
+git config --global --unset user.email
+
+# 设置每个项目repo的自己的user.email
+git config user.email "xxx1@qq.com"
+git config user.name "cloudyan"
+```
+
+之后push pull就木有问题了
+
+**备注**
+
+生成ssh key
+
+`ssh-keygen -m rsa -C "your mail"` （当前目录） 然后可以命名默认id_rsa 或者id_rsa_second 把对应的pub放到公共服务器上。
 
 ## 配置别名
 
