@@ -26,6 +26,7 @@
     - `open -a Go2Shell --args config`
   <!-- ![go2shell-config](../img/go2shell-config.png) -->
 - 代理工具 [charles](https://www.charlesproxy.com/)
+  - https://www.zzzmode.com/mytools/charles/
 - 开机启动项管理
   - Mac 系统自带了开机启动项管理工具
     - 系统偏好设置 -> 用户与群组 -> 登陆项
