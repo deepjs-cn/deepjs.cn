@@ -40,6 +40,8 @@
 - 查看端口 `lsof -i -P | grep -i “listen"`
 - 查找文件
   `find . -type d -iname 文件名`
+- 新系统（macOS Sierra 10.12.X）加强了安全机制，默认不允许用户自行下载安装应用程序，只能从Mac App Store里安装应用。
+  - 解决办法 `sudo spctl --master-disable`
 
 参考：
 

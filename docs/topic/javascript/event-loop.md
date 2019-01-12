@@ -2,6 +2,7 @@
 
 - 摘自 [深入理解 JavaScript 事件循环（一）— event loop](https://www.cnblogs.com/dong-xu/p/7000163.html)
 - [事件循环上下文中微任务和宏任务之间的区别](https://stackoverflow.com/questions/25915634/difference-between-microtask-and-macrotask-within-an-event-loop-context)
+- [JavaScript 运行机制详解：再谈Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
 
 - 宏任务 macrotasks: setTimeout, setInterval, setImmediate, requestAnimationFrame, I/O, UI呈现
 - 微任务 microtasks: process.nextTick, Promises, Object.observe, MutationObserver

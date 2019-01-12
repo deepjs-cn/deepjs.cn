@@ -7,6 +7,7 @@
 - JS
   - 添加原生事件监听
   - 动态子元素事件监听
+  - 输入框首字母自动提示 节流
   - call apply 与 bind
 - vue
   - 生命周期 10个
@@ -15,7 +16,7 @@
   - 组件间通信
   - 封装过哪些组件，举例
   - 页面滚动加载
-  - 如何实现一个两列的瀑布流
+  - 两列瀑布流
 - http 以及缓存
   - Cache-Control 可以设置哪几个值
     - public
@@ -25,11 +26,15 @@
     - max-age=xxx (xxx is numeric)
   - http2
 - webpack
-  -
+- pwa
+- ssr
 - 算法
   - 去重
-  - 一个三级城市数据，输出 id，输出 name
+  - 一个三级城市数据，输出 id，输出 省市区名称
 - event loop 任务队列/事件模型
 - react
   - 性能问题
   - 状态管理
+- git
+  - git reset
+  - git rebase
