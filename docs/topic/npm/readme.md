@@ -14,6 +14,7 @@
   - 你可能需要看一下[chromium下载跳坑](https://segmentfault.com/a/1190000012606616)这个方案，但还是需要翻出去下载，
   - 如果上面方案不行，那么你可能需要了解下[puppeteer 安装失败的解决办法](https://juejin.im/post/5b4a043751882519790c7ad7)，就是去拿到下载的那个版本数字，再去下载，但是可能遇到的问题是找不到downloadURL那堆链接的文件，
   - 那么你就需要[puppeteer环境部署问题小记](https://github.com/billfeller/billfeller.github.io/issues/232)这个方案，
+
 ```js
 1、安装 puppeteer NPM包后，查询package.json配置，获取依赖 CHROMIUM 版本号：
 
@@ -158,7 +159,7 @@ npm unpublish xxx@x.x.x
 
 ## cnpm VS sinopia
 
- -| cnpm | sinopia |
+-| cnpm | sinopia |
 ------ |:-----:| -----:
 系统支持 | 非windows | 全系统
 安装 | 复杂 | 简单
@@ -240,6 +241,40 @@ error Found incompatible module
 解决方案
 
 Instead, the proper solution is to delete `node_modules/`, `package-lock.json` & `yarn.lock` and run `yarn` install or `npm i` again.
+
+安装phantomjs-prebuilt，报错 `PhantomJS not found on PATH`
+
+由于天朝网络的原因：它的安装过程中要去 github 下载一个包，而 github release 文件放在亚马逊 aws 上（被墙了）。解决方法是借助淘宝镜像 (https://npm.taobao.org/mirrors/phantomjs/) 安装，输入以下命令:
+
+```
+PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/
+npm install phantomjs-prebuilt
+```
+
+phantomjs 已改名为 phantomjs-prebuilt
+
+同样安装 node-sass 也会出现类似的问题，解决方法依然是淘宝镜像:
+
+```
+SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/
+npm install node-sass
+```
+
+如果不想每次都输入前面变量可以将它们写入 ~/.npmrc 文件中，可以如下添加
+
+```conf
+# ~/.npmrc
+sass_binary_site = https://npm.taobao.org/mirrors/node-sass/
+phantomjs_cdnurl = https://npm.taobao.org/mirrors/phantomjs/
+```
+
+如果已经设置了 yarn 的镜像源为淘宝镜像，也在 ~/.npmrc 中设置了 phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/，但执行 yarn install 时还是无法正确安装 PhantomJS
+
+解决方案也很简单，根据错误提示，手动到 https://npm.taobao.org/mirrors/phantomjs//phantomjs-2.1.1-linux-x86_64.tar.bz2 下载 PhantomJS 文件，并将该文件拷贝到 /tmp/phantomjs 目录下：
+
+```bash
+cp phantomjs-2.1.1-linux-x86_64.tar.bz2 /tmp/phantomjs
+```
 
 <!-- ### list
 
