@@ -238,6 +238,10 @@ git stash
 git stash list
 git stash pop
 git stash clear
+
+# 缓存区中删除
+git rm --cached <filename>
+git rm -r --cached .
 ```
 
 ## 关于 `HEAD^` 和 `HEAD~`
@@ -358,6 +362,10 @@ J = F^2  = B^3^2   = A^^3^2
     ```
 8. 至少两人code review，之后完成合并
 9. 新增tag标签，发布上线
+    ```bash
+    git tag v1.x.x
+    git push --tags
+    ```
 
 ## 进阶
 
@@ -372,3 +380,4 @@ J = F^2  = B^3^2   = A^^3^2
 - [分布式-Git-分布式工作流程](https://git-scm.com/book/zh/v2/分布式-Git-分布式工作流程)
 - [Git分支管理策略](http://www.ruanyifeng.com/blog/2012/07/git.html)
 - [高效git工作流](https://juejin.im/post/5b2b76e251882574934c388d)
+- [与忽略文件 .gitignore 的斗智斗勇](https://blog.csdn.net/qq_32452623/article/details/75264547)
