@@ -381,3 +381,4 @@ J = F^2  = B^3^2   = A^^3^2
 - [Git分支管理策略](http://www.ruanyifeng.com/blog/2012/07/git.html)
 - [高效git工作流](https://juejin.im/post/5b2b76e251882574934c388d)
 - [与忽略文件 .gitignore 的斗智斗勇](https://blog.csdn.net/qq_32452623/article/details/75264547)
+- [15分钟成为 GIT 专家](https://www.jianshu.com/p/c221f99f0bfd)
