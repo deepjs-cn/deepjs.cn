@@ -1,7 +1,7 @@
 {
-  "name": "kitdocs.org",
+  "name": "deepjs.cn",
   "version": "0.1.0",
-  "description": "致力于提供最新最全的【文档库】及其活跃社区",
+  "description": "聚合一个有价值的文档",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
@@ -14,18 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kitdocs/kitdocs.org.git"
+    "url": "git+https://github.com/deepjs-cn/deepjs.cn.git"
   },
   "keywords": [
-    "kitdocs",
+    "deepjs.cn",
     "kitjs"
   ],
   "author": "Cloudyan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kitdocs/kitdocs.org/issues"
+    "url": "https://github.com/deepjs-cn/deepjs.cn/issues"
   },
-  "homepage": "https://github.com/kitdocs/kitdocs.org#readme",
+  "homepage": "https://github.com/deepjs-cn/deepjs.cn#readme",
   "engines": {
     "node": ">=8"
   },
@@ -33,17 +33,17 @@
     ">1%"
   ],
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.30",
-    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.30",
-    "@vuepress/plugin-i18n-ui": "^1.0.0-alpha.30",
-    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.30",
-    "@vuepress/plugin-notification": "^1.0.0-alpha.30",
-    "@vuepress/plugin-pagination": "^1.0.0-alpha.30",
-    "@vuepress/plugin-pwa": "^1.0.0-alpha.30",
+    "@vuepress/plugin-back-to-top": "^v1.0.0-alpha.39",
+    "@vuepress/plugin-google-analytics": "^v1.0.0-alpha.39",
+    "@vuepress/plugin-i18n-ui": "^v1.0.0-alpha.39",
+    "@vuepress/plugin-medium-zoom": "^v1.0.0-alpha.39",
+    "@vuepress/plugin-notification": "^v1.0.0-alpha.39",
+    "@vuepress/plugin-pagination": "^v1.0.0-alpha.39",
+    "@vuepress/plugin-pwa": "^v1.0.0-alpha.39",
     "gh-pages": "^2.0.1",
     "lint-staged": "8.1.0",
     "moment": "^2.22.2",
-    "vuepress": "1.0.0-alpha.30",
+    "vuepress": "v1.0.0-alpha.39",
     "vuepress-plugin-flowchart": "1.4.3",
     "webp-loader": "^0.4.0"
   }

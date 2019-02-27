@@ -1,7 +1,7 @@
 module.exports = {
   lang: 'en',
-  title: 'KitDocs.org',
-  description: '致力于提供一个好用的知识文档库',
+  title: 'Deepjs.cn',
+  description: '聚合一个有价值的文档',
   news: 'News',
   topic: 'Topic',
   docs: 'Docs',
