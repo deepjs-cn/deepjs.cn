@@ -13,39 +13,37 @@
 |  2 | vue.js-入门指南  | 勿乞 | 2018-09-03 |
 |  3 | css3动画高级用法  | 土豆 | 2018-09-11 |
 |  4 | JS数组和对象的高级用法  | 小康 | 2018-09-18 |
-|    | | | 2018-10-09 |
-|    | | | 2018-10-16 |
 |  5 | HTTP请求入门  | 家胜 | 2018-10-23 |
 |  6 | css scoped VS css modules | 晓寒 | 1week 2018-10-30
-|  7 | html&css 规范 | 勿乞 | 2week 2018-11-08
-|  8 | 小游戏 | 土豆 | 2week 2018-11-13
-|    | event loop & task vs microtask |  | 2018-11-16
-|  9 | webpack 用法及配置 | 小康 | 3week 2018-11-20
-|    | 云开发 |  | 1week 2018-12-23
-| 10 | HTTP 深入理解 | 家胜 | 3week 2018-11-27
-|    | Vim 入门 |  | 1week 2018-11-30
-| 11 | canvas 动画、截图 | 小博 | 2week 2018-12-04
-|    | Charles 操作技巧 |  | 1week 2018-12-07
-| 12 | TypeScript 入门 | 小强 | 2week 2018-12-11
-|   | Nginx 入门 |  | 1week 2018-12-14
-|   | Promise |
-|   | Linux常用命令  | 家胜 |  |
-|   | POSTMAN 入门 | 晓寒 |
-|   | 算法-1 排序算法   |
-|   | 前后端分离 MockServer |
-|   | 数据统计方案 |
-|   | 调试手段 |
-|   | 异步函数 Async |
-|   | serviceWorker |
-|   | 安全 CSP |
-|   | H5性能优化 - RAIL 模型 |
-|   | 性能分析 - 加载性能 |
-|   | 性能分析 - 渲染性能 |
-|   | 流畅的动画 |
-|   | Grid 布局 |
-|   | js.tensorflow.org | |
-|   | 搭建企业内部私有 npm 仓库  |  |
-|   | 工具类  |
+|  7 | TypeScript 入门 | 小强 | 2week 2018-12-08
+|  8 | html&css 规范 | 勿乞 | 2018-01-10
+|  9 | webpack 用法及配置 | 小康 | 2018-01-17
+| 10 | 小游戏 | 土豆 | 2018-01-24
+| 11 | canvas 入门 | 小博 | 2018-02-21
+|    | HTTP 深入理解 |
+|    | event loop & task vs microtask |
+|    | 云开发 |
+|    | Vim 入门 |
+|    | Charles 操作技巧 |
+|    | Nginx 入门 |
+|    | Promise |
+|    | Linux常用命令 |
+|    | POSTMAN 入门 |
+|    | 算法-1 排序算法   |
+|    | 前后端分离 MockServer |
+|    | 数据统计方案 |
+|    | 调试手段 |
+|    | 异步函数 Async |
+|    | serviceWorker |
+|    | 安全 CSP |
+|    | H5性能优化 - RAIL 模型 |
+|    | 性能分析 - 加载性能 |
+|    | 性能分析 - 渲染性能 |
+|    | 流畅的动画 |
+|    | Grid 布局 |
+|    | js.tensorflow.org | |
+|    | 搭建企业内部私有 npm 仓库  |  |
+|    | 工具类  |
 
 html&css 规范 志飞
 canvas 截图 李博
