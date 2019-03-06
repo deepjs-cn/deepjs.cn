@@ -33,17 +33,17 @@
     ">1%"
   ],
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^v1.0.0-alpha.39",
-    "@vuepress/plugin-google-analytics": "^v1.0.0-alpha.39",
-    "@vuepress/plugin-i18n-ui": "^v1.0.0-alpha.39",
-    "@vuepress/plugin-medium-zoom": "^v1.0.0-alpha.39",
-    "@vuepress/plugin-notification": "^v1.0.0-alpha.39",
-    "@vuepress/plugin-pagination": "^v1.0.0-alpha.39",
-    "@vuepress/plugin-pwa": "^v1.0.0-alpha.39",
+    "@vuepress/plugin-back-to-top": "^v1.0.0-alpha.42",
+    "@vuepress/plugin-google-analytics": "^v1.0.0-alpha.42",
+    "@vuepress/plugin-i18n-ui": "^v1.0.0-alpha.42",
+    "@vuepress/plugin-medium-zoom": "^v1.0.0-alpha.42",
+    "@vuepress/plugin-notification": "^v1.0.0-alpha.42",
+    "@vuepress/plugin-pagination": "^v1.0.0-alpha.42",
+    "@vuepress/plugin-pwa": "^v1.0.0-alpha.42",
     "gh-pages": "^2.0.1",
     "lint-staged": "8.1.0",
     "moment": "^2.22.2",
-    "vuepress": "v1.0.0-alpha.39",
+    "vuepress": "v1.0.0-alpha.42",
     "vuepress-plugin-flowchart": "1.4.3",
     "webp-loader": "^0.4.0"
   }
