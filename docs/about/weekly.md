@@ -28,10 +28,10 @@
 - 投票高的，说明是大家喜欢的主题
 - 投票少的，可能一直没机会参与分享，需要分享者考虑更换主题
 
-新增专业程度等级（参与分享的专业人员提交分数1-3，均值 `Math.round` 取整）
+新增分享价值评分（参与分享的专业人员提交分数1-3，均值 `Math.round` 取整）
 
-|Weekly | Theme | Owner | Date | Expertise |
-|:-----:| ----- | ----- | ---- | --------- |
+|Weekly | Theme | Owner | Date | Value |
+|:-----:| ----- | ----- | ---- | ----- |
 | 14 | | | |
 | 15 | | | |
 
@@ -171,7 +171,7 @@ canvas 截图 李博
 - H5性能优化
 - ES6等新语法适用场景
 
-附加技术分享团队增长价值和专业程度评定
+附加技术分享团队增长价值 Team Growth 和专业程度等级 Expertise
 
 https://github.com/RedrockTeam/article/issues/3
 
