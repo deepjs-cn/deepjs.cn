@@ -20,9 +20,12 @@
 |  9 | webpack 用法及配置 | 小康 | 2018-01-17
 | 10 | 小游戏 | 土豆 | 2018-01-24
 | 11 | canvas 入门 | 小博 | 2018-02-21
-| 12 | | | 2018-03-05
-|    | HTTP 深入理解 |
-|    | event loop & task vs microtask |
+| 12 | npm 包 & 单元测试 & 基准测试 | 晓寒 | 2018-02-21
+| 13 | 多 sku 选择组件 | 志飞 | 2018-03-05
+|    | | |
+|    | 由大家投票选出下一次分享的主题(提前至少两周) | 调整分享 | 2018-03-05
+|    | | |
+|    | event loop —— JavaScript 事件循环机制 |
 |    | 云开发 |
 |    | Vim 入门 |
 |    | Charles 操作技巧 |
@@ -92,6 +95,18 @@ canvas 截图 李博
 以下为一些大家期望了解的主题：
 
 - TypeScript
+- webpack
+- 源码解析
+- event loop —— JavaScript 事件循环机制
+- 云开发
+- Charles 操作技巧
+- Nginx 常用功能配置
+- Promise
+- serviceWorker
+- RxJS
+- Docker
+- 算法&数据结构
+
 - MockServer
 - 请求相关配置
   - header头
@@ -106,13 +121,11 @@ canvas 截图 李博
   - 工具类
 - webkit 内核
 - websocket
-- 算法(数据结构、算法等)
 - React Native
 - HTML5 canvas 游戏
 - css3 动画 H5广告
   - 视差滚动
   - 3D
-- RxJS
 - AR
 - 知识储备库
 - mangodb
@@ -123,7 +136,6 @@ canvas 截图 李博
   - 请求都发生什么
   - headers
   - HTTP
-- Docker
 - 搭建网站
 - 骨架屏
 - PWA应用
