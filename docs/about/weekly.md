@@ -21,9 +21,22 @@
 | 10 | 小游戏 | 土豆 | 2018-01-24
 | 11 | canvas 入门 | 小博 | 2018-02-21
 | 12 | npm 包 & 单元测试 & 基准测试 | 晓寒 | 2018-02-21
-| 13 | 多 sku 选择组件 | 志飞 | 2018-03-05
+| 13 | 多 sku 选择组件 | 勿乞 | 2018-03-05
+
+分享计划调整，先由大家提出分享主题，列表后由大家投票选出两周后要分享的主题，进入分享
+
+- 投票高的，说明是大家喜欢的主题
+- 投票少的，可能一直没机会参与分享，需要分享者考虑更换主题
+
+新增专业程度等级（参与分享的专业人员提交分数1-3，均值 `Math.round` 取整）
+
+|Weekly | Theme | Owner | Date | Expertise |
+|:-----:| ----- | ----- | ---- | --------- |
+| 14 | | | |
+| 15 | | | |
+
 |    | | |
-|    | 大家提出分享主题+介绍后，由大家投票选出下一次分享的主题 | 提前两周+ | 2018-03-05
+|    | 提出主题+介绍后，大家投票选出期望的分享主题 | 提前两周+ | 2018-03-05
 |    | | |
 |    | event loop —— JavaScript 事件循环机制 |
 |    | 云开发 |
@@ -94,18 +107,25 @@ canvas 截图 李博
 
 以下为一些大家期望了解的主题：
 
-- TypeScript
-- webpack
-- 源码解析
-- event loop —— JavaScript 事件循环机制
-- 云开发
-- Charles 操作技巧
-- Nginx 常用功能配置
-- Promise
-- serviceWorker
-- RxJS
-- Docker
-- 算法&数据结构
+- 入门系列 1
+  - TypeScript 入门
+  - Canvas 入门
+  - Nginx 入门
+  - Vim 入门
+  - webpack 入门配置
+  - Docker 入门
+- 进阶系列 2
+  - TypeScript 高阶
+  - webpack 高阶
+  - event loop —— JavaScript 事件循环机制
+  - Promise 原理
+  - serviceWorker
+  - RxJS
+  - 云开发
+  - Charles 操作技巧
+  - Nginx 常用功能配置
+- 源码解析系列 3
+- 算法&数据结构 3
 
 - MockServer
 - 请求相关配置
@@ -151,6 +171,7 @@ canvas 截图 李博
 - H5性能优化
 - ES6等新语法适用场景
 
+附加技术分享团队增长价值和专业程度评定
 
 https://github.com/RedrockTeam/article/issues/3
 
