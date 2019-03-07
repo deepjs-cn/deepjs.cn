@@ -54,8 +54,9 @@
 - 李杰: Linux 命令行和脚本语言
 - 彭阳: 关于flutter的现状和应用
 - 杨照警: iOS多线程的理解，Swift面向协议编程和面向函数编程的理解
+- 何家胜: event loop —— JavaScript 事件循环机制
 
-- 康路路: webpack系列3: 基于 vue-cli2 的 webpack 配置
+<!-- - 康路路: webpack系列3: 基于 vue-cli2 的 webpack 配置 -->
 
 除上述分享会计划外，新增**共同学习计划**，提升团队增长
 
