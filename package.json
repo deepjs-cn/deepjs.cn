@@ -42,6 +42,7 @@
     "@vuepress/plugin-pwa": "^v1.0.0-alpha.42",
     "gh-pages": "^2.0.1",
     "lint-staged": "8.1.0",
+    "markdown-it-table-of-contents": "^0.4.3",
     "moment": "^2.22.2",
     "vuepress": "v1.0.0-alpha.42",
     "vuepress-plugin-flowchart": "1.4.3",

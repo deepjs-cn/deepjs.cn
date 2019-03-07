@@ -135,6 +135,7 @@ module.exports = ctx => ({
       // md.use(require('markdown-it-deflist'))
       // md.use(require("markdown-it-katex"))
       // md.use(require("markdown-it-plantuml"))
+      md.use(require("markdown-it-table-of-contents"))
 
       // md.use(require('markdown-it-prettier'))
       // // md.use(require('markdown-it-mathjax'))
