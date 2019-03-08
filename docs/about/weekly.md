@@ -53,12 +53,13 @@
 
 需要包含主要内容描述、分享者、需要准备的时间
 
-- 康路路: webpack系列2: 打包项目实例
-- 李博: linux与shell基本命令
+- 康路路: 入门系列：webpack2 —— 打包项目实例
+- 李博: 入门系列：linux与shell基本命令
 - 李杰: Linux 命令行和脚本语言
 - 彭阳: 关于flutter的现状和应用
 - 杨照警: iOS多线程的理解，Swift面向协议编程和面向函数编程的理解
-- 何家胜: event loop —— JavaScript 事件循环机制
+- 何家胜: 深入原理系列：event loop —— JavaScript 事件循环机制
+- 闫战军: 源码系列：vuex 源码解析
 
 <!-- - 康路路: webpack系列3: 基于 vue-cli2 的 webpack 配置 -->
 
@@ -85,11 +86,17 @@
 
 ### 参考主题
 
-以下列举了一些大家期望更多了解的主题，供参考：
+以下列举了一些大家期望更多了解的主题，并进行了一般分组，供参考：
+
+- 入门系列: 从不会到会实现入门，附加常见配置、使用技巧 或 普及某概念或形势
+- 深入原理系列: 深入原理，复杂应用，扩展插件，局部问题的解决方案
+- 解决方案系列: 独立完整的解决方案的设计、实现、分析
+- 源码系列: 对网络现有的成熟解决方案的源码原理解析
+- 算法系列: 编程之必备技能
 
 如有缺失，可以反馈
 
-- 入门基础/常用配置或技巧
+- 入门系列
   - TypeScript
   - Canvas
   - Vim
@@ -107,40 +114,48 @@
   - css3 动画 H5广告
   - Charles 操作技巧
   - Linux常用命令和脚本语言
+  - websocket
+  - git
+  - IndexedDB
+  - ngrok
+  - asm.js
+  - npx
+  - serviceWorker
+  - babel
+  - jest
+- 深入原理系列
   - 调试手段
     - H5调试
     - hybrid调试
-  - websocket
-  - git
-  - IndexDB
-  - ngrok
-- 进阶深入/知识点原理
   - event loop —— JavaScript 事件循环机制
   - Promise 原理
   - 异步函数 Async
-  - 深入理解 HTTP 请求头
+  - 深入 HTTP 请求头
     - 缓存
     - Content-Type
-  - serviceWorker
   - webpack 插件入门
-- 完整解决方案
+  - 尾调用优化
+- 解决方案系列
   - 前后端分离的 MockServer 实现方案
   - 数据统计上报实现方案
   - 错误统计收集实现方案
   - 跨域请求实现方案
   - 骨架屏实现方案
   - hybrid 实现方案
-- 源码解析系列 3
+  - 多 sku 选择实现方案
+- 源码系列
   - vue 源码解析
   - vuex 源码解析
   - vue-router 源码解析
   - react 源码解析
   - webpack 原理
+  - require 源码
+  - underscore 源码&函数式编程
   - 小程序实现原理解析
-- 算法&数据结构 3
+- 算法系列
   - 排序算法
   - 字符串操作
-  - 集合排列组合
+  - 集合排列、组合
   - 树
 
 ### 分享汇集
