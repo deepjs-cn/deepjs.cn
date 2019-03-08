@@ -44,22 +44,24 @@
 
 ### 分享会预告
 
-| Weekly | Theme | Owner | Date | Value |
+| Weekly | Owner | Theme | Date | Value |
 | :----: | :---- | :---- | :--: | :---: |
-| 14 | 关于flutter的现状和应用 | 彭阳 | 2018-03-15 |  |
+| 14 | 彭阳 | 关于flutter的现状和应用 | 2018-03-15 |  |
 | 15 |  |  |  |  |
 
 ### 分享主题池
 
 需要包含主要内容描述、分享者、需要准备的时间
 
-- 康路路: 入门系列：webpack2 —— 打包项目实例
-- 李博: 入门系列：linux与shell基本命令
-- 李杰: Linux 命令行和脚本语言
-- 彭阳: 关于flutter的现状和应用
-- 杨照警: iOS多线程的理解，Swift面向协议编程和面向函数编程的理解
-- 何家胜: 深入原理系列：event loop —— JavaScript 事件循环机制
-- 闫战军: 源码系列：vuex 源码解析
+| Owner | Theme | Group | ReadyTime |
+| :---- | :---- | :--- | :-------: |
+| 康路路 | webpack2 —— 打包项目实例 | 入门 | 2week |
+| 李博 | linux与shell基本命令 | 入门 | 2week |
+| 李杰 | Linux 命令行和脚本语言 | | 2week |
+| 彭阳 | 关于flutter的现状和应用 | | 2week |
+| 杨照警 | iOS多线程的理解，Swift面向协议编程和面向函数编程的理解 | 深入原理 | 2week |
+| 何家胜 | event loop —— JavaScript 事件循环机制 | 深入原理 | 2week |
+| 闫战军 | vuex 源码解析 | 源码 | 2week |
 
 <!-- - 康路路: webpack系列3: 基于 vue-cli2 的 webpack 配置 -->
 
