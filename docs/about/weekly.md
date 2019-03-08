@@ -115,7 +115,6 @@
   - Charles 操作技巧
   - Linux常用命令和脚本语言
   - websocket
-  - git
   - IndexedDB
   - ngrok
   - asm.js
@@ -123,6 +122,10 @@
   - serviceWorker
   - babel
   - jest
+  - Page Lifecycle API
+  - Page Visibility API
+  - 读懂火焰图
+  - Git 常用命令
 - 深入原理系列 2
   - 调试手段
     - H5调试
@@ -135,6 +138,10 @@
     - Content-Type
   - webpack 插件入门
   - 尾调用优化
+  - RSA算法原理
+  - Git 实现原理
+  - 理解OAuth 2.0
+  - Git 工作流
 - 解决方案系列 3
   - 前后端分离的 MockServer 实现方案
   - 数据统计上报实现方案
@@ -179,5 +186,6 @@
 - [postman](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables)
 - [mockserver](https://my.oschina.net/xbl/blog/2246297)
 - [https://github.com/RedrockTeam/article/issues/3](https://github.com/RedrockTeam/article/issues/3)
+- http://www.ruanyifeng.com/blog/2015/05/require.html
 
 附加技术分享团队增长价值 Team Growth 和专业程度等级 Expertise
