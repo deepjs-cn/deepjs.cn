@@ -99,10 +99,11 @@
 
 如有缺失，可以反馈
 
-- 入门应用系列 1
+- 入门应用系列 1(部分分享，文章即可)
   - TypeScript
   - Canvas
   - Vim
+  - Nginx
   - Docker
   - 云开发
   - flutter
@@ -121,14 +122,14 @@
   - IndexedDB
   - ngrok
   - asm.js
-  - npx
   - serviceWorker
   - babel
   - jest
-  - Page Lifecycle API
-  - Page Visibility API
   - 读懂火焰图
   - Git 常用命令
+  - npx
+  - Page Lifecycle API
+  - Page Visibility API
 - 进阶原理系列 2
   - 调试手段
     - H5调试
