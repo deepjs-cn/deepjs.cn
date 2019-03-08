@@ -37,7 +37,7 @@
 
 | Owner | Theme | Level | ReadyTime |
 | :---- | :---- | :--- | :-------: |
-| 康路路 | webpack2 —— 打包项目实例 | 入门 | 2week |
+| 康路路 | webpack —— 打包项目实例 | 入门 | 2week |
 | 李博 | linux与shell基本命令 | 入门 | 2week |
 | 李杰 | Linux 命令行和脚本语言 | | 2week |
 | 彭阳 | 关于flutter的现状和应用 | | 2week |
@@ -45,7 +45,7 @@
 | 何家胜 | event loop —— JavaScript 事件循环机制 | 进阶 | 2week |
 | 闫战军 | vuex 源码解析 | 源码 | 2week |
 
-<!-- - 康路路: webpack系列3: 基于 vue-cli2 的 webpack 配置 -->
+<!-- - 康路路: webpack —— 基于 vue-cli2 的 webpack 配置 -->
 
 除上述分享会计划外，新增**共同学习计划**，提升团队增长
 
