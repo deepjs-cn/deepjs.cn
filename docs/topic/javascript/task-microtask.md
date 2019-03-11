@@ -30,7 +30,6 @@
 　　你可以在这里查看输出结果：
 
 
-
  　　正确的答案是：'script start'、'script end'、'promise1'、'promise2'、'setTimeout'。但是不同的浏览器可能会出现不同的输出顺序。
 
 　　Microsoft Edge, FireFox 40, iOS Safari 以及 Safari 8.0.8 将会在 'promise1' 和 'promise2' 之前输出 'setTimeout'。但是奇怪的是，FireFox 39 和 Safari 8.0.7 却又是按照正确的顺序输出。
@@ -164,9 +163,8 @@ mutate	timeout	promise	timeout
 promise	promise	promise	promise
 timeout	promise	timeout	timeout
 timeout	timeout	timeout	promise
+
 　　奇怪的是，在 Chrome 的个别版本里可能会得到不同的结果，究竟谁是正确答案？让我们一步一步的分析：
-
-
 
  　　从上面 demo 可以看出，正确的答案应该是：'click'、'click'、'promise'、'mutate'、'promise'、'timeout'、'timeout'。所以看来 Chrome 给出的是正确答案。
 

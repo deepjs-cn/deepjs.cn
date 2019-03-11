@@ -36,14 +36,16 @@
 需要包含主要内容描述、分享者、需要准备的时间
 
 | No. | Owner | Theme | Level | ReadyTime |
-| :-: | :---- | :---- | :--- | :-------: |
+| :-: | :---- | :---- | :--- | :-------: | :-----: |
 |  1 | 康路路 | webpack —— 打包项目实例 | 入门 | 2week |
 |  2 | 李博 | linux与shell基本命令 | 入门 | 2week |
 |  3 | 李杰 | Linux 命令行和脚本语言 | | 2week |
-|  4 | 彭阳 | 关于flutter的现状和应用 | | 2week |
 |  5 | 杨照警 | iOS多线程 & Swift面向协议 vs 面向函数编程 | 进阶 | 2week |
 |  6 | 何家胜 | event loop —— JavaScript 事件循环机制 | 进阶 | 2week |
 |  7 | 闫战军 | vuex 源码解析 | 源码 | 2week |
+|  8 | 杜永强 | 待定 | 学习计划 | 2week |
+|  9 | 陈国风 | 待定 |  | 2week |
+| 10 | 王志飞 | 待定 |  | 2week |
 
 <!-- - 康路路: webpack —— 基于 vue-cli2 的 webpack 配置 -->
 
