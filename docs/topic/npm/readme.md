@@ -159,7 +159,7 @@ npm unpublish xxx@x.x.x
 
 ## cnpm VS sinopia
 
--| cnpm | sinopia |
+-| cnpm | sinopia | sonatype
 ------ |:-----:| -----:
 系统支持 | 非windows | 全系统
 安装 | 复杂 | 简单
@@ -292,4 +292,6 @@ org
   - x-mini
   - kitdocs √
   - xdocs √
-- js-cli √ -->
+  - tpls √
+- js-cli √
+- x-mini √ -->
