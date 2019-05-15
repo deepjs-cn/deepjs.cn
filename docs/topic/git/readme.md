@@ -24,6 +24,11 @@
   - [解决方法](https://blog.csdn.net/lindexi_gd/article/details/52554159) 如下
   - `git pull <remote-url> --allow-unrelated-histories`
 - [git 需要知道的1000个问题](https://lindexi.gitee.io/post/git-%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%841000%E4%B8%AA%E9%97%AE%E9%A2%98.html)
+- 在.gitignore中添加规则无效解决办法
+  - 实际是已经跟踪的文件，后添加规则，此时才无效。
+  - 解决办法：可以使用如下方式，让git重新对文件进行跟踪
+  - `git rm -rf --cached .`
+  - `git add .\`
 
 ### 知识扩展
 
