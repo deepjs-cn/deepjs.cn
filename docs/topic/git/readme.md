@@ -6,8 +6,15 @@
 
 ## 常见问题
 
-- 如何安装、快捷配置以及常见命令操作
-- 如何更改刚提交的commit 日志 `git commit --amend`
+- 如何[安装](#安装)？
+- 推荐的常用配置？
+- 常见的操作有哪些？
+- 如何撤销前一次操作或提交？如果 N 次呢？
+  - `git add`
+  - `git commit`
+  - `git push`
+- 如何更改刚提交的commit 日志
+  - `git commit --amend`
 - 如何撤销提交，撤销前一次，前N次
 - 如何删除远程分支
 - 如何拉取一个本地不存在的远程分支到本地
@@ -16,8 +23,7 @@
   - `git checkout -b 本地分支名x origin/远程分支名x`
   - `git branch -vv`
 - 合并分支，是否保留具体日志记录 `git merge --no-ff`
-- [如何绑定多个账号，多个 github、gitlab 等账户并存?](#)
-- 常见操作的逆操作都是什么，如何操作
+- [如何绑定多个账号，多个 github、gitlab 等账户并存?](#多账号配置问题)
 - git无法pull仓库refusing to merge unrelated histories(git 项目A，提交到 git 项目 B上，无法 pull)
   - 如果合并了两个不同的开始提交的仓库，在新的 git 会发现这两个仓库可能不是同一个，为了防止开发者上传错误，于是就给下面的提示
   - `fatal: refusing to merge unrelated histories`
@@ -144,7 +150,7 @@ git config user.name "cloudyan"
 
 ## 配置别名
 
-为了操作更为简单便捷，可以配置别名
+为了操作更为简单便捷，可以配置别名，对应配置文件 `~/.gitconfig`
 
 ```conf
 [alias]
@@ -156,6 +162,11 @@ git config user.name "cloudyan"
   type = cat-file -t
   dump = cat-file -p
   mg = merge --no-ff
+
+# git clone一个github上的仓库，太慢，经常连接失败
+# 但是github官网流畅访问，为什么？
+# https://www.zhihu.com/question/27159393
+$ code ~/.gitconfig
 ```
 
 ## 常用命令

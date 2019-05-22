@@ -29,7 +29,7 @@ $ git clone <url>
 
 - 配置
 
-Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。
+Git的设置文件为 `.gitconfig`，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。
 
 ```bash
 # 显示当前的Git配置
@@ -41,6 +41,11 @@ $ git config -e [--global]
 # 设置提交代码时的用户信息
 $ git config [--global] user.name "[name]"
 $ git config [--global] user.email "[email address]"
+
+# git clone一个github上的仓库，太慢，经常连接失败
+# 但是github官网流畅访问，为什么？
+# https://www.zhihu.com/question/27159393
+$ code ~/.gitconfig
 ```
 
 **配置别名**
