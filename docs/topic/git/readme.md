@@ -16,7 +16,7 @@
 - 如何更改刚提交的commit 日志
   - `git commit --amend`
 - 如何撤销提交，撤销前一次，前N次
-- 如何删除远程分支
+- 如何删除远程分支，如何快捷的批量删除？
 - 如何拉取一个本地不存在的远程分支到本地
   - `git fetch origin dev`
   - `git fetch origin 远程分支名x:本地分支名x`
@@ -35,6 +35,15 @@
   - 解决办法：可以使用如下方式，让git重新对文件进行跟踪
   - `git rm -rf --cached .`
   - `git add .\`
+
+高效实用操作
+
+```bash
+# 批量删除本地分支
+git branch | cat
+git branch -D hotfix log test
+# 删除已合并分支呢，删除已合并到 release 的分支呢
+```
 
 ### 知识扩展
 

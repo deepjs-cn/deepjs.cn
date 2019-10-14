@@ -82,7 +82,11 @@ P.S.Lerna是Babel自己日用并开源的工具，见 [Why is Babel a monorepo?]
   - 安装最新版 `npm i npm@latest -g`
 - yarn
   - `yarn global add xxx`
-  - Yarn 升级 `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
+  - yarn 升级全局包 `yarn global upgrade`
+  - yarn 全局模块安装路径 `~/.config/yarn/global/node_modules/`
+  - Yarn 升级自己 `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
+  - `cd ~/.config/yarn/global && yarn check || yarn install --force`
+  - https://365airsoft.com/zh-CN/questions/1645066/yarn
 - n 管理 nodejs 版本
   - `sudo n list`
   - `sudo n use x.x.x`
@@ -181,6 +185,20 @@ npm unpublish xxx@x.x.x
 ## FAQ
 
 这里收集一些遇到的 npm 问题
+
+- npm 安装全局模块避免使用 sudo
+
+To avoid requiring `sudo` for `n` and `npm` global installs, it is suggested you either install to your home directory using `N_PREFIX`, or take ownership of the system directories:
+
+```bash
+# make cache folder (if missing) and take ownership
+sudo mkdir -p /usr/local/n
+sudo chown -R $(whoami) /usr/local/n
+# take ownership of node install destination folders
+sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+```
+
+source by https://github.com/tj/n
 
 - [npm 和 yarn 缓存策略对比](https://segmentfault.com/a/1190000009709213)
   - npm
