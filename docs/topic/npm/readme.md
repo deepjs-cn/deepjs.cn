@@ -294,6 +294,36 @@ phantomjs_cdnurl = https://npm.taobao.org/mirrors/phantomjs/
 cp phantomjs-2.1.1-linux-x86_64.tar.bz2 /tmp/phantomjs
 ```
 
+安装 `puppeteer` 总是超时怎么办？
+
+解决方案
+
+主要是因为安装 `puppeteer` 会安装 Chromium，梯子不够长会导致安装失败。可以仅安装 `puppeteer-core`，然后指定本地的 chrome/Chromium 浏览器路径，这样就不需要再安装 Chromium 浏览器了
+
+```js
+import path from 'path'
+import puppeteer from 'puppeteer-core'
+
+(async function run() {
+  // 使用时如下
+  const browser = await puppeteer.launch({
+    // headless: false
+    // 这里注意路径指向可执行的浏览器。
+    // 各平台路径可以在 node_modules/puppeteer-core/lib/BrowserFetcher.js 中找到
+    // executablePath: path.resolve('/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome')
+    executablePath: path.resolve('/Applications/Chromium.app/Contents/MacOS/Chromium')
+  });
+
+  const page = await pageInit({
+    browser,
+  });
+
+  // ...
+})();
+```
+
+这样就不必安装 `puppeteer` 包了
+
 <!-- ### list
 
 org
