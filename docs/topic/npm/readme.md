@@ -73,6 +73,12 @@ P.S.Lerna是Babel自己日用并开源的工具，见 [Why is Babel a monorepo?]
 
 ## 常用工具配置
 
+解决 npm 全局安装需要 sudo 的问题,可以如下配置
+
+```bash
+
+```
+
 - npm
   - `npm list -g --depth=0`
     - 查看全局包位置 `npm root -g`
@@ -99,13 +105,17 @@ P.S.Lerna是Babel自己日用并开源的工具，见 [Why is Babel a monorepo?]
   - `brew install nvm`
   - 添加path
     ```bash
-    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
     ```
   - `nvm install node` 安装最新版 node
   - `nvm install --lts` 安装LTS版本 node
   - 安装之后就删除之前安装的全局 npm 包,重新使用 nvm 安装 node,并重新安装全局 npm 包
-  - 查看全局模块 `npm ls -g --depth=0`
+  - `npm ls -g --depth=0` 查看已经安装在全局的模块，以便删除这些全局模块后再按照不同的 node 版本重新进行全局安装
+  - `sudo rm -rf /usr/local/lib/node_modules` 删除全局 node_modules 目录
+  - `sudo rm /usr/local/bin/node` 删除 node
+  - `sudo rm -rf /usr/local/n/` 删除 n 相关
+  - `cd /usr/local/bin && ls -l | grep "../lib/node_modules/" | awk '{print $9}'| xargs rm` 删除全局 node 模块注册的软链
 - nrm 管理npm源（或镜像源）
   - `nrm ls`
   - `nrm use taobao`
@@ -339,6 +349,15 @@ import puppeteer from 'puppeteer-core'
 ```
 
 这样就不必安装 `puppeteer` 包了
+
+**brew install nvm 安装慢怎么办**
+
+在天朝是慢, 可以修改 `~/.zshrc`
+
+```bash
+# nvm
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+```
 
 <!-- ### list
 
