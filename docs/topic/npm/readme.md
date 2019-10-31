@@ -87,9 +87,25 @@ P.S.Lerna是Babel自己日用并开源的工具，见 [Why is Babel a monorepo?]
   - Yarn 升级自己 `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
   - `cd ~/.config/yarn/global && yarn check || yarn install --force`
   - https://365airsoft.com/zh-CN/questions/1645066/yarn
-- n 管理 nodejs 版本
+- n 管理 nodejs 版本(推荐使用 nvm)
   - `sudo n list`
   - `sudo n use x.x.x`
+- nvm 与 n 的区别
+  - [TJ 大神的 n](https://github.com/tj/n) 命令, 是作为一个 node 的模块而存在
+  - 而 [nvm](https://github.com/nvm-sh/nvm) 是一个独立于 node/npm 的外部 shell 脚本，因此 n 命令相比 nvm 更加局限
+  - 由于 npm 安装的模块路径均为 /usr/local/lib/node_modules ，当使用 n 切换不同的 node 版本时，实际上会共用全局的 node/npm 目录。 因此不能很好的满足『按不同 node 版本使用不同全局 node 模块』的需求。
+  - 因此建议各位尽早开始使用 nvm ，以免出现全局模块无法更新的问题。
+- nvm
+  - `brew install nvm`
+  - 添加path
+    ```bash
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+    ```
+  - `nvm install node` 安装最新版 node
+  - `nvm install --lts` 安装LTS版本 node
+  - 安装之后就删除之前安装的全局 npm 包,重新使用 nvm 安装 node,并重新安装全局 npm 包
+  - 查看全局模块 `npm ls -g --depth=0`
 - nrm 管理npm源（或镜像源）
   - `nrm ls`
   - `nrm use taobao`
