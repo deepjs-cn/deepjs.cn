@@ -87,9 +87,9 @@ P.S.Lerna是Babel自己日用并开源的工具，见 [Why is Babel a monorepo?]
   - `npm uninstall -g xxx`
   - 安装最新版 `npm i npm@latest -g`
 - yarn
-  - `yarn global add xxx`
+  - 全局安装 `yarn global add xxx`
   - yarn 升级全局包 `yarn global upgrade`
-  - yarn 全局模块安装路径 `~/.config/yarn/global/node_modules/`
+  - 全局模块安装路径 `yarn global dir` 输出 `~/.config/yarn/global`
   - Yarn 升级自己 `curl --compressed -o- -L https://yarnpkg.com/install.sh | bash`
   - `cd ~/.config/yarn/global && yarn check || yarn install --force`
   - https://365airsoft.com/zh-CN/questions/1645066/yarn
