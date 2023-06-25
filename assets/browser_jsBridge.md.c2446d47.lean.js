@@ -1,0 +1,1 @@
+import{_ as r,o as e,c as s}from"./chunks/framework.75ed6a74.js";const t=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"browser/jsBridge.md","filePath":"browser/jsBridge.md"}');const a=r({name:"browser/jsBridge.md"},[["render",function(r,t,a,o,d,i){return e(),s("div")}]]);export{t as __pageData,a as default};

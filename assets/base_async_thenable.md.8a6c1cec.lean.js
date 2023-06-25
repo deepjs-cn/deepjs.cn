@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t}from"./chunks/framework.75ed6a74.js";const s=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"base/async/thenable.md","filePath":"base/async/thenable.md"}');const n=e({name:"base/async/thenable.md"},[["render",function(e,s,n,r,o,c){return a(),t("div")}]]);export{s as __pageData,n as default};
